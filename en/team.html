@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team STRIKE #33624</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .member-grid{display:grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-md,16px);}
+        @media (max-width: 900px){ .member-grid{ grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 600px){ .member-grid{ grid-template-columns: 1fr; } }
+        .member-card .member-photo{ width:100%; height:auto; border-radius:8px; display:block; }
+    </style>
+    <script src="../nav-script.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+           <a href="index.html" class="logo">STRIKE #33624</a>
+            <div style="display: flex; align-items: center;">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about-first.html">FIRST</a></li>
+                    <li><a href="about-ftc.html">FTC</a></li>
+                    <li><a href="learning.html">Learning</a></li>
+                    <li><a href="team.html">Team</a></li>
+                </ul>
+                <a href="../team.html" class="lang-switcher" style="margin-right: 12px; color: var(--color-gold); text-decoration: none; font-weight: 600; border: 1px solid var(--color-gold); padding: 4px 10px; border-radius: 6px;" title="Русская версия">RU</a>
+                <div class="theme-switcher" onclick="toggleTheme()" title="Toggle theme">
+                    <span id="theme-icon">☀️</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Team Banner -->
+    <section class="section" style="padding-top: var(--spacing-md);">
+        <div class="container">
+            <img src="../изображения/страйк.jpeg" alt="Team STRIKE Banner" class="banner" onerror="this.src='https://via.placeholder.com/1200x400/FFD700/000000?text=Team+Strike'">
+        </div>
+    </section>
+
+    <!-- Team Name & Philosophy -->
+    <section class="section">
+        <div class="container">
+            <div class="grid">
+                <div style="grid-column: 1 / 7;">
+                   <h1>STRIKE #33624</h1>
+
+<h2 style="margin-top: var(--spacing-sm); margin-bottom: var(--spacing-md);">
+Who We Are
+</h2>
+
+<p style="margin-bottom: var(--spacing-sm); font-size: 1.1rem;">
+<strong>STRIKE #33624</strong> is a FIRST Tech Challenge team from Shymkent, Kazakhstan, bringing together students passionate about robotics, engineering, programming and innovation.
+</p>
+
+<p style="margin-bottom: var(--spacing-sm);">
+Our mission is to create innovative solutions, promote STEM education and represent Kazakhstan in international robotics competitions.
+</p>
+
+<p>
+We believe in teamwork, continuous learning and striving for excellence. Every team member contributes to our shared success and growth.
+</p>
+                </div>
+                <div style="grid-column: 7 / 13;">
+                    <div class="card" style="height: 100%; display: flex; flex-direction: column; justify-content: center;">
+                        <div style="text-align: center;">
+                            <div style="font-size: 4rem; margin-bottom: var(--spacing-sm);">⚡</div>
+                            <h3 style="color: var(--color-gold);">⚡
+STRIKE #33624</h3>
+                            <p style="margin-top: var(--spacing-sm);">
+                               Innovation.<br>
+Technology.<br>
+Teamwork.<br>
+<strong>Our path to success.</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- Team Members -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Meet Our Team</h2>
+            <p class="section-subtitle">
+                A diverse group of students, mentors, and volunteers working together to build amazing robots.
+            </p>
+           <div class="captain-wrapper" style="margin-bottom: var(--spacing-md);">
+    <div class="captain-card" style="display:flex; align-items:flex-start; gap:16px; padding:var(--spacing-md); background: linear-gradient(90deg, rgba(255,215,0,0.06), rgba(0,0,0,0.02)); border-radius:8px;">
+
+        <img src="../изображения/диана.jpg"
+             alt="Diana Urkunbayeva"
+             class="member-photo"
+             style="width:220px; height:280px; object-fit:cover; border-radius:8px;">
+
+        <div>
+            <h2 style="margin:0 0 6px 0;">Diana Urkunbayeva</h2>
+            <p style="color: var(--color-gold); font-weight:600; margin:0 0 4px 0;">
+                Team Captain
+            </p>
+            <p style="margin:0; font-size:0.95rem;">
+                Negotiation, Leadership, Strategy
+            </p>
+        </div>
+
+    </div>
+</div>
+            <div class="member-grid">
+                <div class="member-card">
+                    <img src="../изображения/нурсая.jpeg" alt="Nursaya Beibit" class="member-photo" style="width: 150px; height: 150px; object-fit: cover;">
+                    <h3>Nursaya Beibit</h3>
+                    <p style="color: var(--color-gold); font-weight: 600;">Programmer</p>
+                    <p style="font-size: 0.9rem;">Software Development, Robotics</p>
+                </div>
+                <div class="member-card">
+                    <img src="../изображения/айдын.jpeg" alt="Aidyn Buranbay" class="member-photo" style="width: 150px; height: 150px; object-fit: cover;">
+                    <h3>Aidyn Buranbay</h3>
+                    <p style="color: var(--color-gold); font-weight: 600;">Programmer</p>
+                    <p style="font-size: 0.9rem;">Software Development, Robotics</p>
+                </div>
+                <div class="member-card">
+                    <img src="../изображения/аружан.jpeg" alt="Aruzhan Azimbai" class="member-photo" style="width: 150px; height: 150px; object-fit: cover;">
+                    <h3>Aruzhan Azimbai</h3>
+                    <p style="color: var(--color-gold); font-weight: 600;">Mechanical Lead</p>
+                    <p style="font-size: 0.9rem;">Robot Design, Manufacturing, Mechanisms</p>
+                </div>
+                <div class="member-card">
+                    <img src="../изображения/айдана.jpeg" alt="Aidana Ismail" class="member-photo" style="width: 150px; height: 150px; object-fit: cover;">
+                    <h3>Aidana Ismail</h3>
+                    <p style="color: var(--color-gold); font-weight: 600;">CAD Specialist</p>
+                    <p style="font-size: 0.9rem;">CAD Design, 3D Modeling</p>
+                </div>
+                <div class="member-card">
+                    <img src="../изображения/султан.jpeg" alt="Sultan Baltabai" class="member-photo" style="width: 150px; height: 150px; object-fit: cover;">
+                    <h3>Sultan Baltabai</h3>
+                    <p style="color: var(--color-gold); font-weight: 600;">CAD Specialist</p>
+                    <p style="font-size: 0.9rem;">CAD Design, 3D Modeling</p>
+                </div>
+                <div class="member-card">
+                   <img src="../изображения/алуа.jpeg"
+alt="Alua Nauryzbay"
+class="member-photo"
+style="width: 150px; height: 150px; object-fit: cover; object-position: center top;">
+                    <h3>Alua Nauryzbay</h3>
+                    <p style="color: var(--color-gold); font-weight: 600;">SMM Manager</p>
+                    <p style="font-size: 0.9rem;">Social Media Management, Website Development, Content Creation</p>
+                </div>
+                <div class="member-card">
+                    <img src="../изображения/нурдос.jpeg" alt="Nurdos Yesbergen" class="member-photo" style="width: 150px; height: 150px; object-fit: cover;">
+                    <h3>Nurdos Yesbergen</h3>
+                    <p style="color: var(--color-gold); font-weight: 600;">Lead Builder</p>
+                    <p style="font-size: 0.9rem;">Robot Assembly, Mechanisms, Manufacturing</p>                
+                </div>
+                <div class="member-card">
+                    <img src="../изображения/алихан.jpeg" alt="Alikhan Nurdilda" class="member-photo" style="width: 150px; height: 150px; object-fit: cover;">
+                    <h3>Alikhan Nurdilda</h3>
+                    <p style="color: var(--color-gold); font-weight: 600;">Mechanical Engineer</p>
+                    <p style="font-size: 0.9rem;">Robot Design, Manufacturing</p>
+                </div>
+                 <div class="member-card">
+                    <img src="../изображения/алинур.jpeg" alt="Alinur Sultankulova" class="member-photo" style="width: 150px; height: 150px; object-fit: cover;">
+                    <h3>Alinur Sultankulova</h3>
+                    <p style="color: var(--color-gold); font-weight: 600;">Portfolio Manager</p>
+                    <p style="font-size: 0.9rem;">Portfolio Management, Team Documentation, Content Creation</p>
+                </div>
+                <div class="member-card">
+                    <img src="../изображения/мурат.jpeg" alt="Murat Mussyrman" class="member-photo" style="width: 150px; height: 150px; object-fit: cover;">
+                    <h3>Murat Mussyrman</h3>
+                    <p style="color: var(--color-gold); font-weight: 600;">Engineer</p>
+                    <p style="font-size: 0.9rem;">Engineering, Problem Solving</p>
+                </div>      
+                <div class="member-card">
+                    <img src="../изображения/дархан.jpeg" alt="Darkhan Aitbekov" class="member-photo" style="width: 150px; height: 150px; object-fit: cover;">
+                    <h3>Darkhan Aitbekov</h3>
+                    <p style="color: var(--color-gold); font-weight: 600;">Drive Team Member</p>
+                    <p style="font-size: 0.9rem;">Robot Operation, Match Strategy</p>
+                </div>
+                 <div class="member-card">
+                    <img src="../изображения/санжар.jpeg" alt="Sanzhar Yergali" class="member-photo" style="width: 150px; height: 150px; object-fit: cover;">
+                    <h3>Sanzhar Yergali</h3>
+                    <p style="color: var(--color-gold); font-weight: 600;">Programmer</p>
+                    <p style="font-size: 0.9rem;">Software Development, Robotics</p>
+                </div>
+                 <div class="member-card">
+                    <img src="../изображения/азамат.jpeg" alt="Azamat Zhadiger" class="member-photo" style="width: 150px; height: 150px; object-fit: cover;">
+                    <h3>Azamat Zhadiger</h3>
+                    <p style="color: var(--color-gold); font-weight: 600;">Research Lead</p>
+                    <p style="font-size: 0.9rem;">Research, Documentation, Innovation</p>
+                </div>
+<div class="member-card">
+    <img src="../изображения/рамазан.jpeg"
+         alt="Ramazan Karimzhan"
+         class="member-photo"
+         style="width: 150px; height: 150px; object-fit: cover;">
+    <h3>Ramazan Karimzhan</h3>
+    <p style="color: var(--color-gold); font-weight: 600;">Junior Engineer</p>
+    <p style="font-size: 0.9rem;">Engineering, Robot Development</p>
+</div>
+                <div class="member-card">
+                    <img src="../изображения/ибрахим.jpeg" alt="Ibrakhim Zhaqsybai" class="member-photo" style="width: 150px; height: 150px; object-fit: cover;" onerror="this.src='https://via.placeholder.com/150x150/FFD700/000000?text=AB'">
+                    <h3>Ibrakhim Zhaqsybai</h3>
+                    <p style="color: var(--color-gold); font-weight: 600;">Robot Builder</p>
+                    <p style="font-size: 0.9rem;">Assembly, Mechanisms, Testing</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Season Calendar & Achievements -->
+    <section class="section" style="background: linear-gradient(135deg, var(--color-dark-black) 0%, var(--color-light-gray) 100%);">
+        <div class="container">
+            <h2 class="section-title">Season Timeline & Achievements</h2>
+            <div class="grid" style="margin-top: var(--spacing-md);">
+                <div style="grid-column: 1 / 7;">
+                    <h3 style="margin-bottom: var(--spacing-md);">Our Journey</h3>
+                    <div class="infographic">
+                        <div class="infographic-step">
+                            <div class="step-number">2025-2026</div>
+                            <div>
+                        <h4>First FTC Season</h4>
+                        <p>
+The 2025–2026 season is Team STRIKE's first season in FIRST Tech Challenge. While we are new to FTC, our team is dedicated to developing engineering skills, exploring innovative technologies, and gaining valuable experience through participation in competitions.
+</p>
+                    </div>
+                </div>
+                <div class="infographic-step">
+                    <div class="step-number">Опыт</div>
+                    <div>
+                       <h4>Competition Experience</h4>
+<p>Before joining FTC, Team STRIKE members participated in robotics, engineering, and innovation competitions, gaining valuable experience in teamwork, project development, programming, and problem-solving.</p>
+                    </div>
+                </div>
+                    </div>
+                </div>
+                <div style="grid-column: 7 / 13;">
+                    <h3 style="margin-bottom: var(--spacing-md);">Awards & Recognition</h3>
+                <div class="card" style="margin-bottom: var(--spacing-sm);">
+                    <div class="card-icon">🥇</div>
+                    <h4>WRO Future Innovators Junior Champion</h4>
+                    <p>2026 – Achieved 1st Place in the WRO Future Innovators Junior category.</p>
+                </div>
+                <div class="card" style="margin-bottom: var(--spacing-sm);">
+                    <div class="card-icon">🌟</div>
+                    <h4>Enactus Kazakhstan Finalist</h4>
+                    <p>2026 – Reached the national finals of Enactus Kazakhstan with an innovation-driven project.</p>
+                </div>
+                <div class="card" style="margin-bottom: var(--spacing-sm);">
+                    <div class="card-icon">🤖</div>
+                    <h4>Central Asia FIRST Championship Qualifier</h4>
+                    <p>2026 – Qualified for the Central Asia FIRST Championship held in Astana and competed among the region's top FTC teams.</p>
+                </div>
+                <div class="card" style="border: 1px solid rgba(255, 215, 0, 0.5);">
+                    <div class="card-icon">🚀</div>
+                    <h4>FTC Premier Event Istanbul Qualifier</h4>
+                    <p>2026 – Team STRIKE #33624 qualified for the FTC Premier Event in Istanbul and earned the opportunity to represent Kazakhstan on the international stage.</p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="section">
+        <div class="container">
+            <div class="grid">
+                <div style="grid-column: 1 / 7;">
+                    <h2>Our Story</h2>
+                    <p style="margin-bottom: var(--spacing-sm);">
+                       Team STRIKE #33624 is a FIRST Tech Challenge team from Shymkent representing a new generation of engineers, programmers and innovators in Kazakhstan.
+
+                    </p>
+                    <p style="margin-bottom: var(--spacing-sm);">
+                       Throughout the season, team members develop skills in engineering, programming, mechanics, CAD design, documentation and teamwork. Every member plays an important role in achieving our common goals.
+
+                    </p>
+                    <p style="margin-bottom: var(--spacing-sm);">
+                        One of our greatest achievements was qualifying for the FTC Premier Event in Istanbul. This milestone allowed us to represent Kazakhstan internationally and gain valuable experience competing with strong teams from around the world.
+
+                    </p>
+                    <p>
+                        Today Team STRIKE #33624 continues to grow, improve technical skills and create new opportunities to promote robotics among students.
+                    </p>
+                </div>
+                <div style="grid-column: 7 / 13; display: flex; align-items: center; justify-content: center;">
+                    <img src="../изображения/фото команды.jpeg"
+     alt="Team STRIKE"
+     style="width:100%; height:auto; border-radius: var(--radius-md);">
+                    <div style="width: 100%; height: 400px; background: linear-gradient(135deg, var(--color-dark-black) 0%, var(--color-light-gray) 100%); border: 1px solid rgba(255, 215, 0, 0.3); border-radius: var(--radius-md); display: none; align-items: center; justify-content: center; color: var(--color-text-secondary);">
+                        Team History Timeline
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Contribution to FIRST -->
+    <section class="section" style="background: linear-gradient(135deg, var(--color-dark-black) 0%, var(--color-light-gray) 100%);">
+        <div class="container">
+            <h2 class="section-title">Our Contribution to FIRST</h2>
+            <p class="section-subtitle">
+               Team STRIKE #33624 actively contributes to the growth of FIRST in Kazakhstan by creating educational resources, mentoring new teams and sharing knowledge with the robotics community.
+            </p>
+            <div class="grid" style="margin-top: var(--spacing-md);">
+                <div style="grid-column: 1 / 7;">
+                    <div class="card" style="margin-bottom: var(--spacing-md);">
+                        <div class="card-icon">🌐</div>
+                        <h3>Educational Website</h3>
+                        <p>
+                            We created and maintain a comprehensive educational resource with learning materials,
+                            tutorials and guides for teams at every level. The site is available in multiple
+                            languages and helps newcomers get started quickly with FTC.
+                        </p>
+                    </div>
+                    <div class="card" style="margin-bottom: var(--spacing-md);">
+                        <div class="card-icon">🎓</div>
+                        <h3>Mentorship and Training</h3>
+                        <p>
+                            We regularly run workshops and online sessions for new teams. Over the last two
+                            seasons we helped launch 2 new teams that continue to successfully participate in
+                            competitions.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🌍</div>
+                        <h3>Connections with Teams Abroad</h3>
+                        <p>
+                            We establish and maintain partnerships with teams from different countries, exchange
+                            experience, knowledge and best practices. We participate in international initiatives
+                            and collaborative projects to grow the global FIRST community.
+                        </p>
+                    </div>
+                </div>
+                <div style="grid-column: 7 / 13;">
+                    <div class="card" style="margin-bottom: var(--spacing-md);">
+                        <div class="card-icon">📢</div>
+                        <h3>Screamage</h3>
+                        <p>
+                            We organized and ran Screamage — a large-scale event for the robotics community
+                            bringing together teams, mentors and enthusiasts. The event contributed to experience
+                            sharing and strengthened connections within the community.
+                        </p>
+                    </div>
+                    <div class="card" style="margin-bottom: var(--spacing-md);">
+                        <div class="card-icon">📖</div>
+                        <h3>FTC Books and Guide for the Blind</h3>
+                        <p>
+                            We developed and published special materials and FTC guides adapted for people with
+                            visual impairments. Includes audio versions, tactile diagrams and special formats to
+                            make robotics accessible to everyone.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🌟</div>
+                        <h3>Openness and Accessibility</h3>
+                        <p>
+                            All of our materials, code, designs and knowledge are open to the community. We
+                            believe that the growth of FIRST in Kazakhstan depends on the joint efforts of all
+                            teams.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" style="margin-top: var(--spacing-md); text-align: center;">
+                <h3 style="margin-bottom: var(--spacing-sm);">Our Mission</h3>
+                <p style="font-size: 1.1rem; color: var(--color-text-secondary);">
+                   The mission of Team STRIKE #33624 is to advance robotics and STEM education in Kazakhstan by inspiring students to explore science, technology, engineering and programming.
+
+We strive to create an environment where every participant can unlock their potential, gain practical experience and work on real engineering challenges.
+
+Through FIRST Tech Challenge, we develop not only technical knowledge but also leadership, responsibility, communication and teamwork.
+
+We believe technology can shape the future, and education and collaboration help create that future today.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Projects -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Our Projects & Technical Achievements</h2>
+            <p class="section-subtitle">
+                Highlights of our robot subsystems and technical innovations from past seasons.
+            </p>
+            <div class="info-cards">
+                <div class="card">
+                    <div class="card-icon">⚙️</div>
+                    <h3>Custom Drivetrain</h3>
+                    <p>
+                        Designed and built a high-performance mecanum drivetrain with optimized gear ratios for
+                        maximum speed and maneuverability. Achieved 95% efficiency in field testing.
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🎯</div>
+                    <h3>Precision Intake System</h3>
+                    <p>
+                        Developed a dual-roller intake mechanism with sensor feedback for reliable pickup of game
+                        elements. The system handles multiple object types with a 98% success rate.
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🤖</div>
+                    <h3>Advanced Autonomous</h3>
+                    <p>
+                        Implemented odometry-based localization with AprilTag detection for precise positioning.
+                        Autonomous routines achieve consistent scoring in competition matches.
+                    </p>
+                </div>
+            </div>
+            <div class="info-cards" style="margin-top: var(--spacing-md);">
+                <div class="card">
+                    <div class="card-icon">📐</div>
+                    <h3>CAD & Design</h3>
+                    <p>
+                        A full CAD design of the robot with detailed assemblies and manufacturing drawings. All
+                        custom parts are engineered for manufacturability and reliability.
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">💻</div>
+                    <h3>Software Architecture</h3>
+                    <p>
+                        Modular software framework with reusable subsystems, state machines and comprehensive
+                        telemetry. The codebase follows best practices for maintainability.
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🔧</div>
+                    <h3>Manufacturing Excellence</h3>
+                    <p>
+                        In-house manufacturing capabilities including 3D printing, CNC machining and precision
+                        assembly. Quality control processes ensure reliable robot performance.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about-first.html">About FIRST</a></li>
+                        <li><a href="about-ftc.html">About FTC</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="learning.html">Guides & Tutorials</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>FIRST</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://www.firstinspires.org" target="_blank">FIRST Global</a></li>
+                        <li><a href="about-first.html">FIRST Kazakhstan</a></li>
+                        <li><a href="about-ftc.html">FTC Program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li>Email: ftcstrike@gmail.com</li>
+                        <li>Phone: +7 705 255 19 89</li>
+                        <li>Location: Kazakhstan</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+ 

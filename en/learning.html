@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning & Tutorials - Team STRIKE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../nav-script.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Team STRIKE</a>
+            <div style="display: flex; align-items: center;">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about-first.html">FIRST</a></li>
+                    <li><a href="about-ftc.html">FTC</a></li>
+                    <li><a href="learning.html">Learning</a></li>
+                    <li><a href="team.html">Team</a></li>
+                </ul>
+                <a href="../learning.html" class="lang-switcher" style="margin-right: 12px; color: var(--color-gold); text-decoration: none; font-weight: 600; border: 1px solid var(--color-gold); padding: 4px 10px; border-radius: 6px;" title="Русская версия">RU</a>
+                <div class="theme-switcher" onclick="toggleTheme()" title="Toggle theme">
+                    <span id="theme-icon">☀️</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="hero" style="min-height: 400px;">
+        <div class="container">
+            <div style="text-align: center;">
+                <h1>Learning & Tutorials</h1>
+                <p style="font-size: 1.25rem; max-width: 800px; margin: var(--spacing-md) auto; color: var(--color-text-secondary);">
+                    Comprehensive learning modules designed to help teams at every level succeed in FIRST Tech
+                    Challenge. From the basics to advanced techniques, find everything you need to build
+                    competitive robots.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Start Here Section -->
+    <section class="section">
+        <div class="container">
+            <div style="margin-bottom: var(--spacing-lg);">
+                <h2 style="margin-bottom: var(--spacing-md); display: flex; align-items: center; gap: var(--spacing-sm);">
+                    <span style="font-size: 2rem;">🚀</span> Start Here
+                </h2>
+                <p style="margin-bottom: var(--spacing-md); color: var(--color-text-secondary); font-size: 1.1rem;">
+                    New to FTC? Start with this section. We'll help you build your first robot from a minimal kit.
+                </p>
+                <div class="learning-modules">
+                    <div class="module-card" onclick="window.location.href='learning-module.html?id=start-kit'">
+                        <div class="card-icon">📦</div>
+                        <h3>Minimal Starter Kit</h3>
+                        <p>
+                            What you need to buy to get started: basic FTC kit, tools, consumables. A list with
+                            prices and where to buy in Kazakhstan.
+                        </p>
+                    </div>
+                    <div class="module-card" onclick="window.location.href='learning-module.html?id=first-robot'">
+                        <div class="card-icon">🔨</div>
+                        <h3>Building Your First Robot</h3>
+                        <p>
+                            Step-by-step guide: from unboxing to the robot's first motion. Video tutorials and
+                            checklists for every stage.
+                        </p>
+                    </div>
+                    <div class="module-card" onclick="window.location.href='learning-module.html?id=testing'">
+                        <div class="card-icon">✅</div>
+                        <h3>Functionality Testing</h3>
+                        <p>
+                            How to check that everything works: testing motors, servos and sensors. Solutions
+                            for typical beginner problems.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+    <!-- Learning Modules -->
+    <section class="section">
+        <div class="container">
+            <!-- Basics Module -->
+            <div style="margin-bottom: var(--spacing-lg);">
+                <h2 style="margin-bottom: var(--spacing-md); display: flex; align-items: center; gap: var(--spacing-sm);">
+                    <span style="font-size: 2rem;">📚</span> Basics
+                </h2>
+                <p style="margin-bottom: var(--spacing-md); color: var(--color-text-secondary);">
+                    Essential knowledge for new teams starting out with FTC.
+                </p>
+                <div class="learning-modules">
+                    <div class="module-card" onclick="window.location.href='learning-module.html?id=getting-started'">
+                        <div class="card-icon">🚀</div>
+                        <h3>Getting Started</h3>
+                        <p>
+                            Learn how to form a team, find mentors and set up your workspace. The essential
+                            first steps for new FTC teams.
+                        </p>
+                    </div>
+                    <div class="module-card" onclick="window.location.href='learning-module.html?id=registration'">
+                        <div class="card-icon">📝</div>
+                        <h3>Registration</h3>
+                        <p>
+                            A step-by-step guide to registering your team with FIRST, understanding fees and
+                            accessing team resources.
+                        </p>
+                    </div>
+                    <div class="module-card" onclick="window.location.href='learning-module.html?id=season-structure'">
+                        <div class="card-icon">📅</div>
+                        <h3>Season Structure</h3>
+                        <p>
+                            Understand the FTC season timeline: kickoff, build season, competitions and key
+                            deadlines throughout the year.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Robot Module -->
+            <div style="margin-bottom: var(--spacing-lg);">
+                <h2 style="margin-bottom: var(--spacing-md); display: flex; align-items: center; gap: var(--spacing-sm);">
+                    <span style="font-size: 2rem;">🔧</span> Robot
+                </h2>
+                <p style="margin-bottom: var(--spacing-md); color: var(--color-text-secondary);">
+                    Build competitive robots with these comprehensive guides on mechanical design and construction.
+                </p>
+                <div class="learning-modules">
+                    <div class="module-card" onclick="window.location.href='learning-module.html?id=drivetrains'">
+                        <div class="card-icon">🚗</div>
+                        <h3>Drivetrains</h3>
+                        <p>
+                            Learn about different drivetrain types: tank drive, mecanum, swerve and omni
+                            wheels. Design principles and selection criteria.
+                        </p>
+                    </div>
+                    <div class="module-card" onclick="window.location.href='learning-module.html?id=mechanisms'">
+                        <div class="card-icon">⚙️</div>
+                        <h3>Mechanisms</h3>
+                        <p>
+                            Design effective mechanisms: intakes, lifts, manipulators and end-effectors.
+                            Mechanical advantage, gear ratios and force analysis.
+                        </p>
+                    </div>
+                    <div class="module-card" onclick="window.location.href='learning-module.html?id=electronics'">
+                        <div class="card-icon">🔌</div>
+                        <h3>Electronics</h3>
+                        <p>
+                            Overview of FTC electronics: control hub, expansion hub, motors, servos and wiring.
+                            Power management and safety.
+                        </p>
+                    </div>
+                    <div class="module-card" onclick="window.location.href='learning-module.html?id=sensors'">
+                        <div class="card-icon">📡</div>
+                        <h3>Sensors</h3>
+                        <p>
+                            Effective use of sensors: encoders, IMU, color sensors, distance sensors and touch
+                            sensors. Integration and calibration.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Programming Module -->
+            <div style="margin-bottom: var(--spacing-lg);">
+                <h2 style="margin-bottom: var(--spacing-md); display: flex; align-items: center; gap: var(--spacing-sm);">
+                    <span style="font-size: 2rem;">💻</span> Programming
+                </h2>
+                <p style="margin-bottom: var(--spacing-md); color: var(--color-text-secondary);">
+                    Master FTC programming from the basics to advanced techniques.
+                </p>
+                <div class="learning-modules">
+                    <div class="module-card" onclick="window.location.href='learning-module.html?id=ftc-sdk'">
+                        <div class="card-icon">📦</div>
+                        <h3>FTC SDK</h3>
+                        <p>
+                            Introduction to the Software Development Kit for FTC. Setting up Android Studio,
+                            project structure and core concepts.
+                        </p>
+                    </div>
+                    <div class="module-card" onclick="window.location.href='learning-module.html?id=autonomous'">
+                        <div class="card-icon">🤖</div>
+                        <h3>Autonomous</h3>
+                        <p>
+                            Writing autonomous programs. Time-based motion, sensor-based navigation and
+                            building reliable autonomous routines.
+                        </p>
+                    </div>
+                    <div class="module-card" onclick="window.location.href='learning-module.html?id=odometry'">
+                        <div class="card-icon">📍</div>
+                        <h3>Odometry</h3>
+                        <p>
+                            Advanced localization using odometry. Dead-wheel encoders, pose estimation and
+                            precise robot positioning.
+                        </p>
+                    </div>
+                    <div class="module-card" onclick="window.location.href='learning-module.html?id=apriltag'">
+                        <div class="card-icon">🏷️</div>
+                        <h3>AprilTag</h3>
+                        <p>
+                            Image processing with AprilTag detection. Camera setup, tag recognition and using
+                            vision for autonomous navigation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Strategy Module -->
+            <div style="margin-bottom: var(--spacing-lg);">
+                <h2 style="margin-bottom: var(--spacing-md); display: flex; align-items: center; gap: var(--spacing-sm);">
+                    <span style="font-size: 2rem;">🎯</span> Strategy
+                </h2>
+                <p style="margin-bottom: var(--spacing-md); color: var(--color-text-secondary);">
+                    Competitive strategy and match planning to maximize your team's performance.
+                </p>
+                <div class="learning-modules">
+                    <div class="module-card" onclick="window.location.href='learning-module.html?id=scouting'">
+                        <div class="card-icon">🔍</div>
+                        <h3>Scouting</h3>
+                        <p>
+                            Effective scouting techniques: data collection, analysis and using scouting data
+                            for alliance selection and match strategy.
+                        </p>
+                    </div>
+                    <div class="module-card" onclick="window.location.href='learning-module.html?id=match-planning'">
+                        <div class="card-icon">📊</div>
+                        <h3>Match Planning</h3>
+                        <p>
+                            Developing match strategies, alliance communication and adapting to different
+                            opponents and field conditions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Safety & Organization -->
+            <div style="margin-bottom: var(--spacing-lg);">
+                <h2 style="margin-bottom: var(--spacing-md); display: flex; align-items: center; gap: var(--spacing-sm);">
+                    <span style="font-size: 2rem;">🛡️</span> Safety & Organization
+                </h2>
+                <p style="margin-bottom: var(--spacing-md); color: var(--color-text-secondary);">
+                    Important aspects of team operations: safety, work organization, portfolio keeping.
+                </p>
+                <div class="learning-modules">
+                    <div class="module-card" onclick="window.location.href='learning-module.html?id=safety'">
+                        <div class="card-icon">⚠️</div>
+                        <h3>Safety in FTC</h3>
+                        <p>
+                            Safety rules for working with tools, electronics and at competitions. A safety
+                            checklist for your team.
+                        </p>
+                    </div>
+                    <div class="module-card" onclick="window.location.href='learning-module.html?id=team-organization'">
+                        <div class="card-icon">👥</div>
+                        <h3>Team Organization</h3>
+                        <p>
+                            How to assign roles, organize meetings and manage time. Templates for planning
+                            your season and team meetings.
+                        </p>
+                    </div>
+                    <div class="module-card" onclick="window.location.href='learning-module.html?id=portfolio'">
+                        <div class="card-icon">📔</div>
+                        <h3>Portfolio Keeping</h3>
+                        <p>
+                            How to maintain an Engineering Notebook: what to record, how to structure it,
+                            examples of good entries. Important for Inspire and Think awards.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Common Mistakes -->
+            <div style="margin-bottom: var(--spacing-lg);">
+                <h2 style="margin-bottom: var(--spacing-md); display: flex; align-items: center; gap: var(--spacing-sm);">
+                    <span style="font-size: 2rem;">⚠️</span> Common Mistakes
+                </h2>
+                <p style="margin-bottom: var(--spacing-md); color: var(--color-text-secondary);">
+                    Learn from common pitfalls and avoid mistakes that can cost your team valuable points.
+                </p>
+                <div class="card" style="max-width: 900px; margin: 0 auto;">
+                    <h3>Top Mistakes to Avoid</h3>
+                    <ul style="margin-left: var(--spacing-md); color: var(--color-text-secondary); line-height: 2;">
+                        <li><strong>Overcomplicating designs:</strong> Simple, reliable solutions often outperform complex ones</li>
+                        <li><strong>Ignoring game rules:</strong> Always read the game manual thoroughly and check for updates</li>
+                        <li><strong>Poor time management:</strong> Plan your build season and stick to deadlines</li>
+                        <li><strong>Inadequate testing:</strong> Test early and often, especially autonomous routines</li>
+                        <li><strong>Neglecting documentation:</strong> Keep engineering notebooks and document your process</li>
+                        <li><strong>Not practicing driving:</strong> Driver skill is crucial - practice regularly</li>
+                        <li><strong>Forgetting safety:</strong> Follow all safety rules and use proper protective equipment</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about-first.html">About FIRST</a></li>
+                        <li><a href="about-ftc.html">About FTC</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="learning.html">Guides & Tutorials</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>FIRST</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://www.firstinspires.org" target="_blank">FIRST Global</a></li>
+                        <li><a href="about-first.html">FIRST Kazakhstan</a></li>
+                        <li><a href="about-ftc.html">FTC Program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li>Email: ftcstrike@gmail.com</li>
+                        <li>Phone: +7 705 255 19 89</li>
+                        <li>Location: Kazakhstan</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

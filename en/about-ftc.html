@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About FTC - Team STRIKE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../nav-script.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Team STRIKE</a>
+            <div style="display: flex; align-items: center;">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about-first.html">FIRST</a></li>
+                    <li><a href="about-ftc.html">FTC</a></li>
+                    <li><a href="learning.html">Learning</a></li>
+                    <li><a href="team.html">Team</a></li>
+                </ul>
+                <a href="../about-ftc.html" class="lang-switcher" style="margin-right: 12px; color: var(--color-gold); text-decoration: none; font-weight: 600; border: 1px solid var(--color-gold); padding: 4px 10px; border-radius: 6px;" title="Русская версия">RU</a>
+                <div class="theme-switcher" onclick="toggleTheme()" title="Toggle theme">
+                    <span id="theme-icon">☀️</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- FTC Overview -->
+    <section class="hero hero-bg" style="min-height: 500px; --hero-bg-image: url('../изображения/FIRSTsubmitted.jpg');">
+        <div class="container">
+            <div class="grid">
+                <div style="grid-column: 1 / 8;">
+                    <h1>FIRST Tech Challenge</h1>
+                    <p style="font-size: 1.25rem; margin-bottom: var(--spacing-md); color: var(--color-text-secondary);">
+                        A robotics competition for students in grades 7-12 that combines the excitement of sport
+                        with the rigor of science and technology.
+                    </p>
+                </div>
+                <div style="grid-column: 8 / 13;">
+                    <img src="../изображения/FIRSTsubmitted.jpg" alt="FTC Robot" style="width: 100%; height: 300px; object-fit: cover; border-radius: var(--radius-md); border: 1px solid var(--border-color); box-shadow: var(--shadow-md);" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div style="width: 100%; height: 300px; background-color: var(--color-medium-gray); border-radius: var(--radius-md); display: none; align-items: center; justify-content: center; color: var(--color-text-secondary);">
+                        FTC Robot Illustration
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content with Glossary Sidebar -->
+    <section class="section">
+        <div class="container">
+            <div class="grid">
+                <!-- Main Content -->
+                <div style="grid-column: 1 / 9;">
+                    <h2>What is FIRST Tech Challenge?</h2>
+                    <p style="margin-bottom: var(--spacing-md);">
+                        FIRST Tech Challenge (FTC) is a robotics competition designed for students in grades
+                        7-12. Teams of up to 15 students work together to design, build, program and operate
+                        robots to compete in an alliance format against other teams.
+                    </p>
+
+                    <h3 style="margin-top: var(--spacing-md);">Engineering and Design</h3>
+                    <p style="margin-bottom: var(--spacing-sm);">
+                        FTC teams use a reusable robotics platform to design and build robots. Students learn
+                        mechanical engineering principles, CAD design and manufacturing techniques. The platform
+                        encourages innovation while providing a solid foundation for learning.
+                    </p>
+
+                    <h3 style="margin-top: var(--spacing-md);">Robots and Competition</h3>
+                    <p style="margin-bottom: var(--spacing-sm);">
+                        Robots compete in matches where they have to perform various tasks on a 12'x12' field.
+                        Teams have to balance autonomous and driver-controlled periods, requiring both programming
+                        skills and strategic thinking.
+                    </p>
+
+                    <h3 style="margin-top: var(--spacing-md);">Teamwork and Collaboration</h3>
+                    <p style="margin-bottom: var(--spacing-sm);">
+                        FTC emphasizes Gracious Professionalism® and Coopertition®. Teams work together, share
+                        knowledge and help each other succeed. Competition is about more than winning — it's about
+                        learning, growing and inspiring others.
+                    </p>
+
+                    <h3 style="margin-top: var(--spacing-md);">Match Structure</h3>
+                    <p style="margin-bottom: var(--spacing-sm);">
+                        Each match consists of an autonomous period (30 seconds) during which robots operate
+                        without driver control, followed by a driver-controlled period (2 minutes) during which
+                        teams operate their robots. Teams compete in alliances of two teams, working together to
+                        score points.
+                    </p>
+
+                    <!-- Competition Infographic -->
+                    <div class="infographic" style="margin-top: var(--spacing-md);">
+                        <h3 style="text-align: center; margin-bottom: var(--spacing-md);">How the Competition Works</h3>
+                        <div class="infographic-step">
+                            <div class="step-number">1</div>
+                            <div>
+                                <h4>Qualification Matches</h4>
+                                <p>All teams play several matches. Alliances are randomly paired in each match.</p>
+                            </div>
+                        </div>
+                        <div class="infographic-step">
+                            <div class="step-number">2</div>
+                            <div>
+                                <h4>Alliance Selection</h4>
+                                <p>Top-ranked teams pick alliance partners for the elimination rounds.</p>
+                            </div>
+                        </div>
+                        <div class="infographic-step">
+                            <div class="step-number">3</div>
+                            <div>
+                                <h4>Elimination Rounds</h4>
+                                <p>Alliances compete in a bracket format to determine the champions.</p>
+                            </div>
+                        </div>
+                        <div class="infographic-step">
+                            <div class="step-number">4</div>
+                            <div>
+                                <h4>Awards</h4>
+                                <p>Teams are recognized for robot performance, design, innovation and core values.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Seasonal Rules -->
+                    <div style="margin-top: var(--spacing-lg);">
+                        <h2>Seasonal Rules and Game</h2>
+                        <p style="margin-bottom: var(--spacing-sm);">
+                            Each FTC season includes a new game challenge released in September. The game includes
+                            specific tasks, scoring opportunities and rules teams must follow. Understanding the
+                            game manual is critical for competitive success.
+                        </p>
+                        <div class="card" style="margin-top: var(--spacing-md);">
+                            <h4>Key Rule Categories</h4>
+                            <ul style="margin-left: var(--spacing-md); color: var(--color-text-secondary);">
+                                <li><strong>Robot Rules:</strong> size, weight and construction constraints</li>
+                                <li><strong>Game Rules:</strong> scoring methods and match procedures</li>
+                                <li><strong>Safety Rules:</strong> field safety and robot operation guidelines</li>
+                                <li><strong>Tournament Rules:</strong> competition format and alliance procedures</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Glossary Sidebar -->
+                <div style="grid-column: 9 / 13;">
+                    <div class="glossary-sidebar">
+                        <h3 style="margin-bottom: var(--spacing-md);">FTC Glossary</h3>
+
+                        <div class="glossary-item">
+                            <div class="glossary-term">Drivetrain</div>
+                            <p style="font-size: 0.9rem; color: var(--color-text-secondary);">
+                                The base of the robot that provides mobility. Common types include tank drive,
+                                mecanum and swerve drive.
+                            </p>
+                        </div>
+
+                        <div class="glossary-item">
+                            <div class="glossary-term">TeleOp</div>
+                            <p style="font-size: 0.9rem; color: var(--color-text-secondary);">
+                                Short for "Teleoperated" — the driver-controlled period of a match when team
+                                members operate the robot using gamepads.
+                            </p>
+                        </div>
+
+                        <div class="glossary-item">
+                            <div class="glossary-term">Auton</div>
+                            <p style="font-size: 0.9rem; color: var(--color-text-secondary);">
+                                Short for "Autonomous" — the 30-second period at the start of each match when the
+                                robot operates without driver control, following pre-programmed instructions.
+                            </p>
+                        </div>
+
+                        <div class="glossary-item">
+                            <div class="glossary-term">Endgame</div>
+                            <p style="font-size: 0.9rem; color: var(--color-text-secondary);">
+                                The final portion of the TeleOp period, often including special scoring
+                                opportunities or tasks that can significantly affect the match score.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about-first.html">About FIRST</a></li>
+                        <li><a href="about-ftc.html">About FTC</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="learning.html">Guides & Tutorials</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>FIRST</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://www.firstinspires.org" target="_blank">FIRST Global</a></li>
+                        <li><a href="about-first.html">FIRST Kazakhstan</a></li>
+                        <li><a href="about-ftc.html">FTC Program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li>Email: ftcstrike@gmail.com</li>
+                        <li>Phone: +7 705 255 19 89</li>
+                        <li>Location: Kazakhstan</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

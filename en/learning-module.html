@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Module - Team STRIKE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../nav-script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const params = new URLSearchParams(window.location.search);
+            const moduleId = params.get('id');
+            if (moduleId) {
+                loadModule(moduleId);
+            }
+        });
+
+        function loadModule(id) {
+            const modules = {
+                'start-kit': {
+                    title: 'Minimal Starter Kit',
+                    description: 'What to buy to get started with FTC: basic kit, tools, consumables.',
+                    video: 'https://youtu.be/yVcR9Lx1caU?si=EutP0Y_KkDYuwil2',
+                    content: 'To get started with FTC you will need the basic FTC kit, which includes all necessary components to build the robot. You will also need tools and consumables.',
+                    resources: [
+                        {name: 'Official FTC Store', url: 'https://www.firstinspires.org'},
+                        {name: 'Component list', url: '#'}
+                    ]
+                },
+                'first-robot': {
+                    title: 'Building Your First Robot',
+                    description: 'Step-by-step guide to building your first FTC robot.',
+                    video: 'https://www.youtube.com/watch?v=i9KudsAFXbw',
+                    content: 'Building your first robot starts with unboxing the kit and studying the components. Then follow step-by-step instructions to build a basic chassis.',
+                    resources: [
+                        {name: 'Build instructions', url: '#'},
+                        {name: 'Video tutorials', url: '#'}
+                    ]
+                },
+                'testing': {
+                    title: 'Functionality Testing',
+                    description: 'How to make sure all robot components work correctly.',
+                    video: 'https://www.youtube.com/watch?v=1V9lXFRY1I8',
+                    content: 'Functionality testing includes testing motors, servos, sensors and the control system.',
+                    resources: [
+                        {name: 'Testing checklist', url: '#'}
+                    ]
+                },
+                'getting-started': {
+                    title: 'Getting Started',
+                    description: 'The essential steps for starting out with FTC.',
+                    video: 'https://youtu.be/X5hxgTkrHGM?si=tuyu5QFEvHmklWoQ',
+                    content: 'Start with forming a team, finding mentors and organizing your workspace.',
+                    resources: [
+                        {name: 'Beginner guide', url: 'https://youtu.be/X5hxgTkrHGM?si=tuyu5QFEvHmklWoQ'}
+                    ]
+                },
+                'registration': {
+                    title: 'Team Registration',
+                    description: 'Step-by-step guide to registering your team with FIRST.',
+                    video: 'https://youtu.be/39WJScpbIm0?si=wwoxtalzNOBwgz-b',
+                    content: 'Registration includes creating an account at firstinspires.org, paying the fees and getting access to resources.',
+                    resources: [
+                        {name: 'FIRST Registration', url: 'https://www.firstinspires.org'}
+                    ]
+                },
+                'season-structure': {
+                    title: 'Season Structure',
+                    description: 'Understanding the FTC season timeline.',
+                    video: 'https://youtu.be/ihuENt-QnVQ?si=VQg_TDnD1EpIbGwc',
+                    content: 'The FTC season includes Kickoff, Build Season, competitions and key deadlines.',
+                    resources: [
+                        {name: 'Season calendar', url: '#'}
+                    ]
+                },
+                'drivetrains': {
+                    title: 'Drivetrains',
+                    description: 'Learning about different drivetrain types.',
+                    video: 'https://www.youtube.com/watch?v=7-NpPBQ2tmw',
+                    content: 'Drivetrains are the foundation of robot mobility. Learn the types: tank drive, mecanum, swerve and omni wheels.',
+                    resources: [
+                        {name: 'Drivetrain guide', url: '#'}
+                    ]
+                },
+                'mechanisms': {
+                    title: 'Mechanisms',
+                    description: 'Designing effective mechanisms for your robot.',
+                    video: 'https://www.youtube.com/watch?v=-4fXc-AbrWM',
+                    content: 'Mechanisms include intakes, lifts, manipulators and end-effectors. Understanding mechanical advantage and gear ratios is important.',
+                    resources: [
+                        {name: 'Mechanism design', url: '#'}
+                    ]
+                },
+                'electronics': {
+                    title: 'Electronics',
+                    description: 'Overview of FTC electronics: controllers, motors, servos.',
+                    video: 'https://youtu.be/1xpbvGeQ4_M?si=-6r574attUdJK8PJ',
+                    content: 'FTC uses the Control Hub, Expansion Hub, various motors and servos. Power management and safety are important.',
+                    resources: [
+                        {name: 'FTC Electronics', url: '#'}
+                    ]
+                },
+                'sensors': {
+                    title: 'Sensors',
+                    description: 'Effective use of sensors in FTC.',
+                    video: 'https://youtu.be/wdV2PYak73o?si=5D36LoAXt8CelUsy',
+                    content: 'Sensors include encoders, IMU, color, distance and touch sensors. Proper integration and calibration are important.',
+                    resources: [
+                        {name: 'Sensor documentation', url: '#'}
+                    ]
+                },
+                'ftc-sdk': {
+                    title: 'FTC SDK',
+                    description: 'Introduction to the Software Development Kit for FTC.',
+                    video: 'https://youtu.be/ok1KDJOyx5k?si=HvO5JFLy8_RDJJvL',
+                    content: 'The FTC SDK provides all the tools needed to program your robot. Start with installing Android Studio and setting up the project.',
+                    resources: [
+                        {name: 'FTC SDK GitHub', url: 'https://github.com/FIRST-Tech-Challenge'},
+                        {name: 'Android Studio', url: 'https://developer.android.com/studio'}
+                    ]
+                },
+                'autonomous': {
+                    title: 'Autonomous',
+                    description: 'Writing autonomous programs for the robot.',
+                    video: 'https://youtu.be/qgw9m4HGRo4?si=s_i95W9-HIZ1iBqM',
+                    content: 'Autonomous mode lets the robot perform tasks without operator control. Use timers, sensors and navigation.',
+                    resources: [
+                        {name: 'Autonomous Guide', url: '#'}
+                    ]
+                },
+                'odometry': {
+                    title: 'Odometry',
+                    description: 'Advanced localization using odometry.',
+                    video: 'https://youtu.be/vGR5iYv7A4w?si=eOcVBuEGSvm8uaZS',
+                    content: 'Odometry lets you accurately determine the robot position on the field using dead-wheel encoders.',
+                    resources: [
+                        {name: 'Odometry Tutorial', url: '#'}
+                    ]
+                },
+                'apriltag': {
+                    title: 'AprilTag',
+                    description: 'Image processing with AprilTag.',
+                    video: 'https://youtu.be/le7XnLAmVJo?si=fazOQIBHLukMgxab',
+                    content: 'AprilTag is a visual marker system that lets the robot determine its position and orientation on the field.',
+                    resources: [
+                        {name: 'AprilTag Documentation', url: '#'},
+                        {name: 'Vision Processing', url: '#'}
+                    ]
+                },
+                'scouting': {
+                    title: 'Scouting',
+                    description: 'Effective scouting techniques for competitions.',
+                    video: 'https://youtu.be/EsoPn_vwibk?si=fFAnZo__hTu92p_1',
+                    content: 'Scouting includes collecting data about other teams, analyzing their performance and using that information for alliance selection.',
+                    resources: [
+                        {name: 'Scouting Tools', url: '#'}
+                    ]
+                },
+                'match-planning': {
+                    title: 'Match Planning',
+                    description: 'Developing match strategy.',
+                    video: 'https://youtu.be/EsoPn_vwibk?si=fFAnZo__hTu92p_1',
+                    content: 'Match planning includes developing strategy, communicating with the alliance and adapting to different conditions.',
+                    resources: [
+                        {name: 'Strategy Guide', url: '#'}
+                    ]
+                },
+                'safety': {
+                    title: 'Safety in FTC',
+                    description: 'Safety rules when working with robots.',
+                    video: 'https://youtu.be/sbT-5sDdWFQ?si=Q3oaXN2cQ3IH7FqR',
+                    content: 'Safety is the number one priority. Learn the safety rules when working with tools, electronics and at competitions.',
+                    resources: [
+                        {name: 'Safety Manual', url: '#'}
+                    ]
+                },
+                'team-organization': {
+                    title: 'Team Organization',
+                    description: 'How to effectively organize team work.',
+                    video: 'https://youtu.be/sV0SZKG_lj8?si=HhqzcHz2VNcL2x66',
+                    content: 'Effective organization includes assigning roles, planning meetings and managing time.',
+                    resources: [
+                        {name: 'Team Templates', url: '#'}
+                    ]
+                },
+                'portfolio': {
+                    title: 'Portfolio Keeping',
+                    description: 'How to maintain an Engineering Notebook.',
+                    video: 'https://youtu.be/3D5HJFXABio?si=DS4DKhzl_0gTv0Ht',
+                    content: 'The Engineering Notebook is an important document that shows the process of the team. Important for the Inspire and Think awards.',
+                    resources: [
+                        {name: 'Notebook Guide', url: '#'}
+                    ]
+                }
+            };
+
+            if (modules[id]) {
+                const module = modules[id];
+                document.getElementById('module-title').textContent = module.title;
+                document.getElementById('module-description').textContent = module.description;
+
+                function getYouTubeId(url) {
+                    if (!url) return null;
+                    try {
+                        const u = new URL(url);
+                        const host = u.hostname.replace('www.','');
+                        if (host === 'youtu.be') {
+                            return u.pathname.slice(1).split(/[\/?#]/)[0] || null;
+                        }
+                        if (host.endsWith('youtube.com')) {
+                            if (u.searchParams && u.searchParams.get('v')) return u.searchParams.get('v');
+                            const parts = u.pathname.split('/').filter(Boolean);
+                            const embedIndex = parts.indexOf('embed');
+                            if (embedIndex !== -1 && parts[embedIndex+1]) return parts[embedIndex+1];
+                            if (parts.length === 1) return parts[0];
+                        }
+                    } catch (e) { /* fall through */ }
+                    const m = url.match(/(?:v=|\/embed\/|youtu\.be\/)([A-Za-z0-9_-]{11})/);
+                    return m ? m[1] : null;
+                }
+
+                let videoId = getYouTubeId(module.video);
+                if (!videoId && module.resources && module.resources.length) {
+                    const res = module.resources.find(r => /youtu/.test(r.url));
+                    if (res) videoId = getYouTubeId(res.url);
+                }
+
+                const watchUrl = videoId ? `https://youtu.be/${videoId}` : module.video;
+                const videoLink = document.getElementById('module-video-link');
+                if (videoLink) {
+                    const thumb = videoId ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg` : '';
+                    videoLink.href = watchUrl;
+                    videoLink.target = '_blank';
+                    videoLink.rel = 'noopener';
+                    videoLink.style.display = 'block';
+                    videoLink.style.width = '100%';
+                    videoLink.style.height = '100%';
+                    videoLink.innerHTML = thumb
+                        ? `<div style="position:relative; width:100%; height:100%;">
+                                <img src="${thumb}" alt="${module.title}" style="width:100%; height:100%; object-fit:cover; border-radius: var(--radius-md);">
+                                <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center;">
+                                    <span style="background:rgba(0,0,0,0.6); color:#fff; padding:12px 18px; border-radius:8px; font-weight:600;">Watch on YouTube</span>
+                                </div>
+                           </div>`
+                        : `<span style="display:inline-block; padding:12px 18px; background:var(--color-gold); color:#000; border-radius:8px;">Watch on YouTube</span>`;
+                }
+
+                document.getElementById('module-content').innerHTML = module.content;
+
+                const resourcesList = document.getElementById('module-resources');
+                if (resourcesList && module.resources) {
+                    resourcesList.innerHTML = module.resources.map(r =>
+                        `<li style="margin-bottom: var(--spacing-sm);">
+                            <a href="${r.url}" target="_blank" style="color: var(--color-gold); text-decoration: none;">🔗 ${r.name}</a>
+                        </li>`
+                    ).join('');
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Team STRIKE</a>
+            <div style="display: flex; align-items: center;">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about-first.html">FIRST</a></li>
+                    <li><a href="about-ftc.html">FTC</a></li>
+                    <li><a href="learning.html" class="active">Learning</a></li>
+                    <li><a href="team.html">Team</a></li>
+                </ul>
+                <a href="../learning-module.html" class="lang-switcher" style="margin-right: 12px; color: var(--color-gold); text-decoration: none; font-weight: 600; border: 1px solid var(--color-gold); padding: 4px 10px; border-radius: 6px;" title="Русская версия">RU</a>
+                <div class="theme-switcher" onclick="toggleTheme()" title="Toggle theme">
+                    <span id="theme-icon">☀️</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Module Content -->
+    <section class="section" style="padding-top: var(--spacing-lg);">
+        <div class="container">
+            <div style="margin-bottom: var(--spacing-md);">
+                <a href="learning.html" class="btn btn-secondary" style="margin-bottom: var(--spacing-md);">← Back to Learning</a>
+                <h1 id="module-title">Module Title</h1>
+                <p id="module-description" style="font-size: 1.1rem; color: var(--color-text-secondary); margin-top: var(--spacing-sm);">
+                    Module description
+                </p>
+            </div>
+
+            <div class="grid">
+                <div style="grid-column: 1 / 9;">
+                    <div class="card" style="margin-bottom: var(--spacing-md);">
+                        <div class="video-placeholder" style="height: 500px; padding: 0; position: relative;">
+                            <a id="module-video-link" style="display:block; width:100%; height:100%; text-decoration:none;"></a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h2>Description</h2>
+                        <div id="module-content" style="color: var(--color-text-secondary); line-height: 1.8;">
+                            Module content
+                        </div>
+                    </div>
+                </div>
+
+                <div style="grid-column: 9 / 13;">
+                    <div class="card" style="position: sticky; top: 100px;">
+                        <h3 style="margin-bottom: var(--spacing-md);">Useful Resources</h3>
+                        <ul id="module-resources" style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: var(--spacing-sm);">
+                                <a href="#" style="color: var(--color-gold); text-decoration: none;">🔗 Official FTC SDK documentation</a>
+                            </li>
+                            <li style="margin-bottom: var(--spacing-sm);">
+                                <a href="#" style="color: var(--color-gold); text-decoration: none;">📚 Java tutorial for FTC</a>
+                            </li>
+                            <li style="margin-bottom: var(--spacing-sm);">
+                                <a href="#" style="color: var(--color-gold); text-decoration: none;">💻 Code examples on GitHub</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about-first.html">About FIRST</a></li>
+                        <li><a href="about-ftc.html">About FTC</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="learning.html">Learning</a></li>
+                        <li><a href="team.html">Team</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>FIRST</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://www.firstinspires.org" target="_blank">FIRST Global</a></li>
+                        <li><a href="about-first.html">FIRST Kazakhstan</a></li>
+                        <li><a href="about-ftc.html">FTC Program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li>Email: ftcstrike@gmail.com</li>
+                        <li>Phone: +7 705 255 19 89</li>
+                        <li>Location: Kazakhstan</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
