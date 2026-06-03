@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About FIRST - FTC Kazakhstan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="nav-script.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Team STRIKE</a>
+            <div style="display: flex; align-items: center;">
+                <ul class="nav-links">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="about-first.html">FIRST</a></li>
+                    <li><a href="about-ftc.html">FTC</a></li>
+                    <li><a href="learning.html">Обучение</a></li>
+                    <li><a href="team.html">Команда</a></li>
+                    <li><a href="media.html">Медиа</a></li>
+                </ul>
+                <a href="en/about-first.html" class="lang-switcher" style="margin-right: 12px; color: var(--color-gold); text-decoration: none; font-weight: 600; border: 1px solid var(--color-gold); padding: 4px 10px; border-radius: 6px;" title="English version">EN</a>
+                <div class="theme-switcher" onclick="toggleTheme()" title="Переключить тему">
+                    <span id="theme-icon">☀️</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- FIRST Global Mission -->
+    <section class="hero hero-bg" style="min-height: 500px; --hero-bg-image: url('изображения/images.png');">
+        <div class="container">
+            <div class="grid">
+                <div style="grid-column: 1 / 13; text-align: center;">
+                    <h1 style="margin-bottom: var(--spacing-md);">Глобальная миссия FIRST</h1>
+                    <p style="font-size: 1.25rem; max-width: 900px; margin: 0 auto; color: var(--color-text-secondary);">
+                        Вдохновлять молодых людей становиться лидерами и новаторами в науке и технологиях, вовлекая 
+                        их в увлекательные программы с наставниками, которые развивают навыки в науке, инженерии и технологиях, 
+                        вдохновляют инновации и способствуют развитию всесторонних жизненных способностей, включая 
+                        уверенность в себе, коммуникацию и лидерство.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FIRST Kazakhstan -->
+    <section class="section">
+        <div class="container">
+            <div class="grid">
+                <div style="grid-column: 1 / 7;">
+                    <h2>FIRST Kazakhstan</h2>
+                    <p style="margin-bottom: var(--spacing-sm);">
+                        FIRST Kazakhstan — это региональная организация, которая приносит преобразующую силу программ FIRST 
+                        студентам по всему Казахстану. Мы работаем над расширением доступа к робототехническому образованию 
+                        и соревнованиям, предоставляя возможности студентам развивать критически важные STEM навыки.
+                    </p>
+                    <p style="margin-bottom: var(--spacing-sm);">
+                        Наша миссия — вдохновлять и готовить следующее поколение инженеров, учёных и 
+                        новаторов в Казахстане через практические программы робототехники, которые сочетают азарт 
+                        спорта с строгостью науки и технологий.
+                    </p>
+                    <p style="margin-bottom: var(--spacing-md);">
+                        Через партнёрства со школами, университетами и лидерами индустрии, FIRST Kazakhstan 
+                        создаёт пути для студентов, чтобы открыть свою страсть к STEM и развить навыки, 
+                        необходимые для успеха в 21 веке.
+                    </p>
+                    <div style="margin-top: var(--spacing-md);">
+                        <h3 style="margin-bottom: var(--spacing-sm);">Официальные ресурсы</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: var(--spacing-xs);">
+                                <a href="https://www.firstinspires.org" target="_blank" class="btn btn-secondary" style="display: inline-block;">
+                                    🌐 Сайт FIRST Global
+                                </a>
+                            </li>
+                            <li style="margin-bottom: var(--spacing-xs);">
+                                <a href="https://www.firstinspires.org/robotics/ftc" target="_blank" class="btn btn-secondary" style="display: inline-block;">
+                                    ⚙️ Страница программы FTC
+                                </a>
+                            </li>
+                            <li style="margin-bottom: var(--spacing-xs);">
+                                <a href="#" class="btn btn-secondary" style="display: inline-block;">
+                                    🇰🇿 FIRST Kazakhstan (Официальный)
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="grid-column: 7 / 13;">
+                    <img src="изображения/images.png" alt="FIRST Kazakhstan" style="width: 100%; height: 400px; object-fit: contain; border-radius: var(--radius-md); background-color: var(--bg-secondary); padding: var(--spacing-sm);" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div style="width: 100%; height: 400px; background-color: var(--color-medium-gray); border-radius: var(--radius-md); display: none; align-items: center; justify-content: center; color: var(--color-text-secondary);">
+                        FIRST Kazakhstan Infographic
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values Cards -->
+    <section class="section" style="background-color: var(--color-light-gray);">
+        <div class="container">
+            <h2 class="section-title">Основные ценности и влияние</h2>
+            <div class="info-cards">
+                <div class="card">
+                    <div class="card-icon">🤝</div>
+                    <h3>Основные ценности</h3>
+                    <p>
+                        <strong>Открытие (Discovery):</strong> Мы исследуем новые навыки и идеи.<br>
+                        <strong>Инновации (Innovation):</strong> Мы используем творчество и настойчивость для решения проблем.<br>
+                        <strong>Влияние (Impact):</strong> Мы применяем то, что изучаем, чтобы улучшить наш мир.<br>
+                        <strong>Инклюзивность (Inclusion):</strong> Мы уважаем друг друга и принимаем наши различия.<br>
+                        <strong>Командная работа (Teamwork):</strong> Мы сильнее, когда работаем вместе.<br>
+                        <strong>Веселье (Fun):</strong> Мы наслаждаемся и празднуем то, что делаем!
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🎯</div>
+                    <h3>Миссия</h3>
+                    <p>
+                        Миссия FIRST — вдохновлять молодых людей становиться лидерами в науке и технологиях, 
+                        вовлекая их в увлекательные программы с наставниками, которые развивают навыки в науке, инженерии и 
+                        технологиях. Мы вдохновляем инновации и способствуем развитию всесторонних жизненных способностей, 
+                        включая уверенность в себе, коммуникацию и лидерство.
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📊</div>
+                    <h3>Влияние</h3>
+                    <p>
+                        Программы FIRST охватили миллионы студентов по всему миру. Участники показывают повышенный 
+                        интерес к STEM карьерам, улучшенные навыки решения проблем и большую уверенность. 
+                        Выпускники FIRST чаще получают STEM степени и строят карьеры, способствуя 
+                        более сильной глобальной инновационной экономике.
+                    </p>
+                </div>
+            </div>
+            <div style="margin-top: var(--spacing-md);">
+                <h3 class="section-title" style="margin-bottom: var(--spacing-md);">Программы FIRST</h3>
+                <div class="info-cards">
+                <div class="card" onclick="window.location.href='first-program.html?id=fll'">
+                    <div class="card-icon">🎯</div>
+                    <h3>FLL (FIRST LEGO League)</h3>
+                    <p>
+                        Для возрастов 4-16 лет. Студенты строят роботов из LEGO и решают реальные проблемы через исследовательские 
+                        и инновационные проекты.
+                    </p>
+                </div>
+                <div class="card" onclick="window.location.href='first-program.html?id=ftc'">
+                    <div class="card-icon">⚙️</div>
+                    <h3>FTC (FIRST Tech Challenge)</h3>
+                    <p>
+                        Для 7-12 классов. Команды проектируют, строят и программируют роботов, используя переиспользуемые платформы для 
+                        соревнований в формате альянсов.
+                    </p>
+                </div>
+                <div class="card" onclick="window.location.href='first-program.html?id=frc'">
+                    <div class="card-icon">🏆</div>
+                    <h3>FRC (FIRST Robotics Competition)</h3>
+                    <p>
+                        Для 9-12 классов. Самая продвинутая программа, где команды строят роботов промышленного размера для 
+                        соревнований в сложных играх.
+                    </p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Season Overview -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Обзор сезона</h2>
+            <div class="infographic">
+                <div class="infographic-step">
+                    <div class="step-number">1</div>
+                    <div>
+                        <h4>Kickoff</h4>
+                        <p>Сезон начинается с раскрытия игры и публикации правил. Команды получают свой вызов и начинают планирование.</p>
+                    </div>
+                </div>
+                <div class="infographic-step">
+                    <div class="step-number">2</div>
+                    <div>
+                        <h4>Сезон сборки (Build Season)</h4>
+                        <p>Команды проектируют, строят и программируют своих роботов. Обычно 6-8 недель интенсивной разработки.</p>
+                    </div>
+                </div>
+                <div class="infographic-step">
+                    <div class="step-number">3</div>
+                    <div>
+                        <h4>Соревнования</h4>
+                        <p>Региональные и чемпионские мероприятия, где команды соревнуются, демонстрируют свою работу и празднуют достижения.</p>
+                    </div>
+                </div>
+                <div class="infographic-step">
+                    <div class="step-number">4</div>
+                    <div>
+                        <h4>Рефлексия и рост</h4>
+                        <p>Команды размышляют о своём сезоне, делятся знаниями и готовятся к следующему вызову.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Навигация</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="about-first.html">О FIRST</a></li>
+                        <li><a href="about-ftc.html">О FTC</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Ресурсы</h4>
+                    <ul class="footer-links">
+                        <li><a href="learning.html">Руководства и туториалы</a></li>
+                        <li><a href="team.html">Наша команда</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>FIRST</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://www.firstinspires.org" target="_blank">FIRST Global</a></li>
+                        <li><a href="about-first.html">FIRST Kazakhstan</a></li>
+                        <li><a href="about-ftc.html">Программа FTC</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <ul class="footer-links">
+                        <li>Email: ftcstrike@gmail.com</li>
+                        <li>Phone: +7 705 255 19 89</li>
+                        <li>Location: Kazakhstan</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+

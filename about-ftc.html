@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О FTC - Team STRIKE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="nav-script.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Team STRIKE</a>
+            <div style="display: flex; align-items: center;">
+                <ul class="nav-links">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="about-first.html">FIRST</a></li>
+                    <li><a href="about-ftc.html">FTC</a></li>
+                    <li><a href="learning.html">Обучение</a></li>
+                    <li><a href="team.html">Команда</a></li>
+                    <li><a href="media.html">Медиа</a></li>
+                </ul>
+                <a href="en/about-ftc.html" class="lang-switcher" style="margin-right: 12px; color: var(--color-gold); text-decoration: none; font-weight: 600; border: 1px solid var(--color-gold); padding: 4px 10px; border-radius: 6px;" title="English version">EN</a>
+                <div class="theme-switcher" onclick="toggleTheme()" title="Переключить тему">
+                    <span id="theme-icon">☀️</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- FTC Overview -->
+    <section class="hero hero-bg" style="min-height: 500px; --hero-bg-image: url('изображения/FIRSTsubmitted.jpg');">
+        <div class="container">
+            <div class="grid">
+                <div style="grid-column: 1 / 8;">
+                    <h1>FIRST Tech Challenge</h1>
+                    <p style="font-size: 1.25rem; margin-bottom: var(--spacing-md); color: var(--color-text-secondary);">
+                        Соревнование по робототехнике для учеников 7-12 классов, которое сочетает азарт спорта 
+                        со строгостью науки и технологий.
+                    </p>
+                </div>
+                <div style="grid-column: 8 / 13;">
+                    <img src="изображения/FIRSTsubmitted.jpg" alt="FTC Robot" style="width: 100%; height: 300px; object-fit: cover; border-radius: var(--radius-md); border: 1px solid var(--border-color); box-shadow: var(--shadow-md);" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div style="width: 100%; height: 300px; background-color: var(--color-medium-gray); border-radius: var(--radius-md); display: none; align-items: center; justify-content: center; color: var(--color-text-secondary);">
+                        FTC Robot Illustration
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content with Glossary Sidebar -->
+    <section class="section">
+        <div class="container">
+            <div class="grid">
+                <!-- Main Content -->
+                <div style="grid-column: 1 / 9;">
+                    <h2>Что такое FIRST Tech Challenge?</h2>
+                    <p style="margin-bottom: var(--spacing-md);">
+                        FIRST Tech Challenge (FTC) — это соревнование по робототехнике, разработанное для учеников 7-12 классов. 
+                        Команды до 15 студентов работают вместе, чтобы проектировать, строить, программировать и управлять роботами для 
+                        соревнований в формате альянсов против других команд.
+                    </p>
+
+                    <h3 style="margin-top: var(--spacing-md);">Инженерия и дизайн</h3>
+                    <p style="margin-bottom: var(--spacing-sm);">
+                        Команды FTC используют переиспользуемую робототехническую платформу для проектирования и сборки роботов. Студенты изучают 
+                        принципы механической инженерии, CAD дизайн и производственные техники. Платформа 
+                        поощряет инновации, предоставляя прочную основу для обучения.
+                    </p>
+
+                    <h3 style="margin-top: var(--spacing-md);">Роботы и соревнования</h3>
+                    <p style="margin-bottom: var(--spacing-sm);">
+                        Роботы соревнуются в матчах, где они должны выполнять различные задачи на поле 12'x12'. 
+                        Команды должны балансировать автономные и управляемые водителем периоды, требуя как навыков программирования, 
+                        так и стратегического мышления.
+                    </p>
+
+                    <h3 style="margin-top: var(--spacing-md);">Командная работа и сотрудничество</h3>
+                    <p style="margin-bottom: var(--spacing-sm);">
+                        FTC подчёркивает Gracious Professionalism® и Coopertition®. Команды работают вместе, делятся 
+                        знаниями и помогают друг другу добиваться успеха. Соревнование — это больше, чем победа — это 
+                        обучение, рост и вдохновение других.
+                    </p>
+
+                    <h3 style="margin-top: var(--spacing-md);">Структура матча</h3>
+                    <p style="margin-bottom: var(--spacing-sm);">
+                        Каждый матч состоит из автономного периода (30 секунд), когда роботы работают без 
+                        управления водителем, за которым следует период управления водителем (2 минуты), когда команды управляют 
+                        своими роботами. Команды соревнуются в альянсах из двух команд, работая вместе для набора очков.
+                    </p>
+
+                    <!-- Competition Infographic -->
+                    <div class="infographic" style="margin-top: var(--spacing-md);">
+                        <h3 style="text-align: center; margin-bottom: var(--spacing-md);">Как работают соревнования</h3>
+                        <div class="infographic-step">
+                            <div class="step-number">1</div>
+                            <div>
+                                <h4>Квалификационные матчи</h4>
+                                <p>Все команды играют несколько матчей. Альянсы случайным образом объединяются в каждом матче.</p>
+                            </div>
+                        </div>
+                        <div class="infographic-step">
+                            <div class="step-number">2</div>
+                            <div>
+                                <h4>Выбор альянсов</h4>
+                                <p>Команды с высоким рейтингом выбирают партнёров по альянсу для раундов на выбывание.</p>
+                            </div>
+                        </div>
+                        <div class="infographic-step">
+                            <div class="step-number">3</div>
+                            <div>
+                                <h4>Раунды на выбывание</h4>
+                                <p>Альянсы соревнуются в формате на выбывание для определения чемпионов.</p>
+                            </div>
+                        </div>
+                        <div class="infographic-step">
+                            <div class="step-number">4</div>
+                            <div>
+                                <h4>Награды</h4>
+                                <p>Команды признаются за производительность робота, дизайн, инновации и основные ценности.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Seasonal Rules -->
+                    <div style="margin-top: var(--spacing-lg);">
+                        <h2>Сезонные правила и игра</h2>
+                        <p style="margin-bottom: var(--spacing-sm);">
+                            Каждый сезон FTC включает новый игровой вызов, выпускаемый в сентябре. Игра включает 
+                            конкретные задачи, возможности для набора очков и правила, которым команды должны следовать. Понимание 
+                            игрового руководства критически важно для конкурентного успеха.
+                        </p>
+                        <div class="card" style="margin-top: var(--spacing-md);">
+                            <h4>Ключевые категории правил</h4>
+                            <ul style="margin-left: var(--spacing-md); color: var(--color-text-secondary);">
+                                <li><strong>Правила робота (Robot Rules):</strong> Ограничения по размеру, весу и конструкции</li>
+                                <li><strong>Игровые правила (Game Rules):</strong> Методы подсчёта очков и процедуры матча</li>
+                                <li><strong>Правила безопасности (Safety Rules):</strong> Безопасность поля и руководящие принципы работы робота</li>
+                                <li><strong>Правила турнира (Tournament Rules):</strong> Формат соревнований и процедуры альянсов</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Glossary Sidebar -->
+                <div style="grid-column: 9 / 13;">
+                    <div class="glossary-sidebar">
+                        <h3 style="margin-bottom: var(--spacing-md);">Глоссарий FTC</h3>
+                        
+                        <div class="glossary-item">
+                            <div class="glossary-term">Drivetrain</div>
+                            <p style="font-size: 0.9rem; color: var(--color-text-secondary);">
+                                Основа робота, которая обеспечивает мобильность. Распространённые типы включают tank drive, 
+                                mecanum и swerve drive.
+                            </p>
+                        </div>
+
+                        <div class="glossary-item">
+                            <div class="glossary-term">TeleOp</div>
+                            <p style="font-size: 0.9rem; color: var(--color-text-secondary);">
+                                Сокращение от "Teleoperated" — период матча, управляемый водителем, когда 
+                                члены команды управляют роботом с помощью геймпадов.
+                            </p>
+                        </div>
+
+                        <div class="glossary-item">
+                            <div class="glossary-term">Auton</div>
+                            <p style="font-size: 0.9rem; color: var(--color-text-secondary);">
+                                Сокращение от "Autonomous" — 30-секундный период в начале каждого матча, когда 
+                                робот работает без управления водителем, следуя заранее запрограммированным инструкциям.
+                            </p>
+                        </div>
+
+                        <div class="glossary-item">
+                            <div class="glossary-term">Endgame</div>
+                            <p style="font-size: 0.9rem; color: var(--color-text-secondary);">
+                                Финальная часть периода TeleOp, часто включающая специальные возможности для набора очков 
+                                или задачи, которые могут значительно повлиять на счёт матча.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about-first.html">About FIRST</a></li>
+                        <li><a href="about-ftc.html">About FTC</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="learning.html">Guides & Tutorials</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="download-app.html">Download App</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>FIRST</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://www.firstinspires.org" target="_blank">FIRST Global</a></li>
+                        <li><a href="about-first.html">FIRST Kazakhstan</a></li>
+                        <li><a href="about-ftc.html">FTC Program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li>Email: ftcstrike@gmail.com</li>
+                        <li>Phone: +7 705 255 19 89</li>
+                        <li>Location: Kazakhstan</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+

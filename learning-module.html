@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Модуль Обучения - Team STRIKE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="nav-script.js"></script>
+    <script>
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        }
+        
+        function updateThemeIcon(theme) {
+            const icon = document.getElementById('theme-icon');
+            if (icon) {
+                icon.textContent = theme === 'light' ? '🌙' : '☀️';
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            updateThemeIcon(savedTheme);
+            
+            // Get module data from URL
+            const params = new URLSearchParams(window.location.search);
+            const moduleId = params.get('id');
+            if (moduleId) {
+                loadModule(moduleId);
+            }
+        });
+        
+        function loadModule(id) {
+            const modules = {
+                'start-kit': {
+                    title: 'Минимальный набор для старта',
+                    description: 'Что нужно купить для начала работы с FTC: базовый набор, инструменты, расходные материалы.',
+                    video: 'https://youtu.be/yVcR9Lx1caU?si=EutP0Y_KkDYuwil2',
+                    content: 'Для начала работы с FTC вам понадобится базовый набор FTC, который включает в себя все необходимые компоненты для сборки робота. Также потребуются инструменты и расходные материалы.',
+                    resources: [
+                        {name: 'Официальный магазин FTC', url: 'https://www.firstinspires.org'},
+                        {name: 'Список компонентов', url: '#'}
+                    ]
+                },
+                'first-robot': {
+                    title: 'Сборка первого робота',
+                    description: 'Пошаговая инструкция по сборке вашего первого FTC робота.',
+                    video: 'https://www.youtube.com/watch?v=i9KudsAFXbw',
+                    content: 'Сборка первого робота начинается с распаковки набора и изучения компонентов. Затем следуйте пошаговым инструкциям для создания базового шасси.',
+                    resources: [
+                        {name: 'Инструкция по сборке', url: '#'},
+                        {name: 'Видео-туториалы', url: '#'}
+                    ]
+                },
+                'testing': {
+                    title: 'Проверка работоспособности',
+                    description: 'Как проверить, что все компоненты робота работают правильно.',
+                    video: 'https://www.youtube.com/watch?v=1V9lXFRY1I8',
+                    content: 'Проверка работоспособности включает тестирование моторов, сервоприводов, датчиков и системы управления.',
+                    resources: [
+                        {name: 'Чек-лист проверки', url: '#'}
+                    ]
+                },
+                'getting-started': {
+                    title: 'Getting Started',
+                    description: 'Основные шаги для начала работы с FTC.',
+                    video: 'https://youtu.be/X5hxgTkrHGM?si=tuyu5QFEvHmklWoQ',
+                    content: 'Начните с формирования команды, поиска менторов и организации рабочего пространства.',
+                    resources: [
+                        {name: 'Руководство для новичков', url: 'https://youtu.be/X5hxgTkrHGM?si=tuyu5QFEvHmklWoQ'}
+                    ]
+                },
+                'registration': {
+                    title: 'Регистрация команды',
+                    description: 'Пошаговое руководство по регистрации команды в FIRST.',
+                    video: 'https://youtu.be/39WJScpbIm0?si=wwoxtalzNOBwgz-b',
+                    content: 'Регистрация включает создание аккаунта на firstinspires.org, оплату взносов и получение доступа к ресурсам.',
+                    resources: [
+                        {name: 'FIRST Registration', url: 'https://www.firstinspires.org'}
+                    ]
+                },
+                'season-structure': {
+                    title: 'Структура сезона',
+                    description: 'Понимание временной линии FTC сезона.',
+                    video: 'https://youtu.be/ihuENt-QnVQ?si=VQg_TDnD1EpIbGwc',
+                    content: 'FTC сезон включает Kickoff, Build Season, соревнования и важные дедлайны.',
+                    resources: [
+                        {name: 'Календарь сезона', url: '#'}
+                    ]
+                },
+                'drivetrains': {
+                    title: 'Drivetrains',
+                    description: 'Изучение различных типов приводов для роботов.',
+                    video: 'https://www.youtube.com/watch?v=7-NpPBQ2tmw',
+                    content: 'Drivetrains - это основа мобильности робота. Изучите типы: tank drive, mecanum, swerve и omni wheels.',
+                    resources: [
+                        {name: 'Гайд по приводам', url: '#'}
+                    ]
+                },
+                'mechanisms': {
+                    title: 'Mechanisms',
+                    description: 'Проектирование эффективных механизмов для робота.',
+                    video: 'https://www.youtube.com/watch?v=-4fXc-AbrWM',
+                    content: 'Механизмы включают интейки, подъемники, манипуляторы и энд-эффекторы. Важно понимать механическое преимущество и передаточные отношения.',
+                    resources: [
+                        {name: 'Дизайн механизмов', url: '#'}
+                    ]
+                },
+                'electronics': {
+                    title: 'Electronics',
+                    description: 'Обзор электроники FTC: контроллеры, моторы, сервоприводы.',
+                    video: 'https://youtu.be/1xpbvGeQ4_M?si=-6r574attUdJK8PJ',
+                    content: 'FTC использует Control Hub, Expansion Hub, различные моторы и сервоприводы. Важно понимать управление питанием и безопасность.',
+                    resources: [
+                        {name: 'Электроника FTC', url: '#'}
+                    ]
+                },
+                'sensors': {
+                    title: 'Sensors',
+                    description: 'Эффективное использование датчиков в FTC.',
+                    video: 'https://youtu.be/wdV2PYak73o?si=5D36LoAXt8CelUsy',
+                    content: 'Датчики включают энкодеры, IMU, цветовые, дистанционные и тактильные датчики. Важна правильная интеграция и калибровка.',
+                    resources: [
+                        {name: 'Документация датчиков', url: '#'}
+                    ]
+                },
+                'ftc-sdk': {
+                    title: 'FTC SDK',
+                    description: 'Введение в Software Development Kit для FTC.',
+                    video: 'https://youtu.be/ok1KDJOyx5k?si=HvO5JFLy8_RDJJvL',
+                    content: 'FTC SDK предоставляет все необходимые инструменты для программирования робота. Начните с установки Android Studio и настройки проекта.',
+                    resources: [
+                        {name: 'FTC SDK GitHub', url: 'https://github.com/FIRST-Tech-Challenge'},
+                        {name: 'Android Studio', url: 'https://developer.android.com/studio'}
+                    ]
+                },
+                'autonomous': {
+                    title: 'Autonomous',
+                    description: 'Написание автономных программ для робота.',
+                    video: 'https://youtu.be/qgw9m4HGRo4?si=s_i95W9-HIZ1iBqM',
+                    content: 'Автономный режим позволяет роботу выполнять задачи без управления оператором. Используйте таймеры, датчики и навигацию.',
+                    resources: [
+                        {name: 'Autonomous Guide', url: '#'}
+                    ]
+                },
+                'odometry': {
+                    title: 'Odometry',
+                    description: 'Продвинутая локализация с использованием одометрии.',
+                    video: 'https://youtu.be/vGR5iYv7A4w?si=eOcVBuEGSvm8uaZS',
+                    content: 'Одометрия позволяет точно определять позицию робота на поле используя энкодеры на мертвых колесах.',
+                    resources: [
+                        {name: 'Odometry Tutorial', url: '#'}
+                    ]
+                },
+                'apriltag': {
+                    title: 'AprilTag',
+                    description: 'Обработка изображений с использованием AprilTag.',
+                    video: 'https://youtu.be/le7XnLAmVJo?si=fazOQIBHLukMgxab',
+                    content: 'AprilTag - это система визуальных маркеров, которая позволяет роботу определять свою позицию и ориентацию на поле.',
+                    resources: [
+                        {name: 'AprilTag Documentation', url: '#'},
+                        {name: 'Vision Processing', url: '#'}
+                    ]
+                },
+                'scouting': {
+                    title: 'Scouting',
+                    description: 'Эффективные техники скаутинга для соревнований.',
+                    video: 'https://youtu.be/EsoPn_vwibk?si=fFAnZo__hTu92p_1',
+                    content: 'Скаутинг включает сбор данных о других командах, анализ их производительности и использование этой информации для выбора альянсов.',
+                    resources: [
+                        {name: 'Scouting Tools', url: '#'}
+                    ]
+                },
+                'match-planning': {
+                    title: 'Match Planning',
+                    description: 'Разработка стратегии для матчей.',
+                    video: 'https://youtu.be/EsoPn_vwibk?si=fFAnZo__hTu92p_1',
+                    content: 'Планирование матча включает разработку стратегии, коммуникацию с альянсом и адаптацию к различным условиям.',
+                    resources: [
+                        {name: 'Strategy Guide', url: '#'}
+                    ]
+                },
+                'safety': {
+                    title: 'Безопасность в FTC',
+                    description: 'Правила безопасности при работе с роботами.',
+                    video: 'https://youtu.be/sbT-5sDdWFQ?si=Q3oaXN2cQ3IH7FqR',
+                    content: 'Безопасность - это приоритет номер один. Изучите правила безопасности при работе с инструментами, электроникой и на соревнованиях.',
+                    resources: [
+                        {name: 'Safety Manual', url: '#'}
+                    ]
+                },
+                'team-organization': {
+                    title: 'Организация команды',
+                    description: 'Как эффективно организовать работу команды.',
+                    video: 'https://youtu.be/sV0SZKG_lj8?si=HhqzcHz2VNcL2x66',
+                    content: 'Эффективная организация включает распределение ролей, планирование встреч и управление временем.',
+                    resources: [
+                        {name: 'Team Templates', url: '#'}
+                    ]
+                },
+                'portfolio': {
+                    title: 'Ведение портфолио',
+                    description: 'Как вести Engineering Notebook.',
+                    video: 'https://youtu.be/3D5HJFXABio?si=DS4DKhzl_0gTv0Ht',
+                    content: 'Engineering Notebook - это важный документ, который показывает процесс работы команды. Важно для наград Inspire и Think.',
+                    resources: [
+                        {name: 'Notebook Guide', url: '#'}
+                    ]
+                }
+            };
+            
+            if (modules[id]) {
+                const module = modules[id];
+                document.getElementById('module-title').textContent = module.title;
+                document.getElementById('module-description').textContent = module.description;
+
+                // helper: извлечь ID YouTube из разных вариантов ссылки
+                function getYouTubeId(url) {
+                    if (!url) return null;
+                    // try URL parsing first
+                    try {
+                        const u = new URL(url);
+                        const host = u.hostname.replace('www.','');
+                        if (host === 'youtu.be') {
+                            // youtu.be/VIDEOID
+                            return u.pathname.slice(1).split(/[\/?#]/)[0] || null;
+                        }
+                        if (host.endsWith('youtube.com')) {
+                            // /watch?v=VIDEOID
+                            if (u.searchParams && u.searchParams.get('v')) return u.searchParams.get('v');
+                            // /embed/VIDEOID or other paths
+                            const parts = u.pathname.split('/').filter(Boolean);
+                            const embedIndex = parts.indexOf('embed');
+                            if (embedIndex !== -1 && parts[embedIndex+1]) return parts[embedIndex+1];
+                            // sometimes ID is the first path segment
+                            if (parts.length === 1) return parts[0];
+                        }
+                    } catch (e) {
+                        // fall through to regex
+                    }
+                    // fallback regex for common patterns
+                    const m = url.match(/(?:v=|\/embed\/|youtu\.be\/)([A-Za-z0-9_-]{11})/);
+                    return m ? m[1] : null;
+                }
+
+                // Найти ID видео: сначала из module.video, иначе по ресурсу
+                let videoId = getYouTubeId(module.video);
+                if (!videoId && module.resources && module.resources.length) {
+                    const res = module.resources.find(r => /youtu/.test(r.url));
+                    if (res) videoId = getYouTubeId(res.url);
+                }
+
+                // Собираем безопасную embed ссылку (youtube-nocookie) с параметрами
+                let embedSrc;
+                if (module.video && module.video.includes('youtube.com/embed') && module.video.includes('si=')) {
+                    // если передали embed-URL с si-параметром — используем его без замены на nocookie
+                    embedSrc = module.video;
+                } else {
+                    embedSrc = videoId
+                        ? `https://www.youtube-nocookie.com/embed/${videoId}?rel=0&modestbranding=1&playsinline=1`
+                        : module.video;
+                }
+
+                // Мы не встраиваем видео на странице — показываем превью с ссылкой на YouTube
+                const watchUrl = videoId ? `https://youtu.be/${videoId}` : module.video;
+                const videoLink = document.getElementById('module-video-link');
+                if (videoLink) {
+                    const thumb = videoId ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg` : '';
+                    videoLink.href = watchUrl;
+                    videoLink.target = '_blank';
+                    videoLink.rel = 'noopener';
+                    videoLink.style.display = 'block';
+                    videoLink.style.width = '100%';
+                    videoLink.style.height = '100%';
+                    videoLink.innerHTML = thumb
+                        ? `<div style="position:relative; width:100%; height:100%;">
+                                <img src="${thumb}" alt="${module.title}" style="width:100%; height:100%; object-fit:cover; border-radius: var(--radius-md);">
+                                <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center;">
+                                    <span style="background:rgba(0,0,0,0.6); color:#fff; padding:12px 18px; border-radius:8px; font-weight:600;">Смотреть на YouTube</span>
+                                </div>
+                           </div>`
+                        : `<span style="display:inline-block; padding:12px 18px; background:var(--color-gold); color:#000; border-radius:8px;">Смотреть на YouTube</span>`;
+                }
+
+                document.getElementById('module-content').innerHTML = module.content;
+
+                // Update resources
+                const resourcesList = document.getElementById('module-resources');
+                if (resourcesList && module.resources) {
+                    resourcesList.innerHTML = module.resources.map(r => 
+                        `<li style="margin-bottom: var(--spacing-sm);">
+                            <a href="${r.url}" target="_blank" style="color: var(--color-gold); text-decoration: none;">🔗 ${r.name}</a>
+                        </li>`
+                    ).join('');
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Team STRIKE</a>
+            <div style="display: flex; align-items: center;">
+                <ul class="nav-links">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="about-first.html">FIRST</a></li>
+                    <li><a href="about-ftc.html">FTC</a></li>
+                    <li><a href="learning.html" class="active">Обучение</a></li>
+                    <li><a href="team.html">Команда</a></li>
+                </ul>
+                <a href="en/learning-module.html" class="lang-switcher" style="margin-right: 12px; color: var(--color-gold); text-decoration: none; font-weight: 600; border: 1px solid var(--color-gold); padding: 4px 10px; border-radius: 6px;" title="English version">EN</a>
+                <div class="theme-switcher" onclick="toggleTheme()" title="Переключить тему">
+                    <span id="theme-icon">☀️</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Module Content -->
+    <section class="section" style="padding-top: var(--spacing-lg);">
+        <div class="container">
+            <div style="margin-bottom: var(--spacing-md);">
+                <a href="learning.html" class="btn btn-secondary" style="margin-bottom: var(--spacing-md);">← Назад к Обучению</a>
+                <h1 id="module-title">Название Модуля</h1>
+                <p id="module-description" style="font-size: 1.1rem; color: var(--color-text-secondary); margin-top: var(--spacing-sm);">
+                    Описание модуля
+                </p>
+            </div>
+            
+            <div class="grid">
+                <div style="grid-column: 1 / 9;">
+                    <div class="card" style="margin-bottom: var(--spacing-md);">
+                        <div class="video-placeholder" style="height: 500px; padding: 0; position: relative;">
+                            <a id="module-video-link" style="display:block; width:100%; height:100%; text-decoration:none;"></a>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <h2>Описание</h2>
+                        <div id="module-content" style="color: var(--color-text-secondary); line-height: 1.8;">
+                            Содержимое модуля
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="grid-column: 9 / 13;">
+                    <div class="card" style="position: sticky; top: 100px;">
+                        <h3 style="margin-bottom: var(--spacing-md);">Полезные Ресурсы</h3>
+                        <ul id="module-resources" style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: var(--spacing-sm);">
+                                <a href="#" style="color: var(--color-gold); text-decoration: none;">🔗 Официальная документация FTC SDK</a>
+                            </li>
+                            <li style="margin-bottom: var(--spacing-sm);">
+                                <a href="#" style="color: var(--color-gold); text-decoration: none;">📚 Учебник по Java для FTC</a>
+                            </li>
+                            <li style="margin-bottom: var(--spacing-sm);">
+                                <a href="#" style="color: var(--color-gold); text-decoration: none;">💻 Примеры кода на GitHub</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Навигация</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="about-first.html">О FIRST</a></li>
+                        <li><a href="about-ftc.html">О FTC</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Ресурсы</h4>
+                    <ul class="footer-links">
+                        <li><a href="learning.html">Обучение</a></li>
+                        <li><a href="team.html">Команда</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>FIRST</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://www.firstinspires.org" target="_blank">FIRST Global</a></li>
+                        <li><a href="about-first.html">FIRST Kazakhstan</a></li>
+                        <li><a href="about-ftc.html">FTC Program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <ul class="footer-links">
+                        <li>Email: ftcstrike@gmail.com</li>
+                        <li>Phone: +7 705 255 19 89</li>
+                        <li>Location: Kazakhstan</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+

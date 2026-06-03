@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>STRIKE #33624 | FTC Kazakhstan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="nav-script.js"></script>
+    <script>
+        // Theme switcher
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        }
+        
+        function updateThemeIcon(theme) {
+            const icon = document.getElementById('theme-icon');
+            if (icon) {
+                icon.textContent = theme === 'light' ? '🌙' : '☀️';
+            }
+        }
+        
+        // Load saved theme - handled by nav-script.js
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">STRIKE #33624</a>
+            <div style="display: flex; align-items: center;">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Главная</a></li>
+                    <li><a href="about-first.html">FIRST</a></li>
+                    <li><a href="about-ftc.html">FTC</a></li>
+                    <li><a href="learning.html">Обучение</a></li>
+                    <li><a href="team.html">Команда</a></li>
+                </ul>
+                <a href="en/index.html" class="lang-switcher" style="margin-right: 12px; color: var(--color-gold); text-decoration: none; font-weight: 600; border: 1px solid var(--color-gold); padding: 4px 10px; border-radius: 6px;" title="English version">EN</a>
+                <div class="theme-switcher" onclick="toggleTheme()" title="Переключить тему">
+                    <span id="theme-icon">☀️</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero hero-bg" style="--hero-bg-image: url('изображения/IMG_5420.JPG');">
+        <div class="container">
+            <div class="grid">
+                <div class="hero-content">
+                    <h1>STRIKE #33624</h1>
+                    <p style="font-size: 1.25rem; margin-bottom: var(--spacing-md); color: var(--color-text-secondary);">
+                       Команда FTC из Шымкента, объединяющая инженеров, программистов и создателей будущих технологий.
+                    </p>
+                    <a href="team.html" class="btn btn-primary">Узнать о Команде</a>
+                </div>
+                <div class="hero-illustration">
+                    <img src="изображения/IMG_5420.JPG" alt="Команда работает над роботом" style="width: 100%; height: 400px; object-fit: cover; border-radius: var(--radius-md); border: 1px solid var(--border-color); box-shadow: var(--shadow-md);" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div style="width: 100%; height: 400px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); display: none; align-items: center; justify-content: center; color: var(--color-text-secondary);">
+                        🤖 Иллюстрация Робототехники
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">О FIRST и FTC</h2>
+            <p class="section-subtitle">
+                FIRST (For Inspiration and Recognition of Science and Technology) — это глобальное сообщество робототехники, 
+                которое готовит молодых людей к будущему. FIRST Kazakhstan приносит этот преобразующий опыт 
+                студентам по всему Казахстану, развивая инновации, командную работу и техническое мастерство через 
+                программу FIRST Tech Challenge (FTC).
+            </p>
+        </div>
+    </section>
+
+    <!-- Info Cards -->
+    <section class="section" style="background-color: var(--color-light-gray);">
+        <div class="container">
+            <div class="info-cards">
+                <div class="card">
+                    <div class="card-icon">🎯</div>
+                    <h3>Что такое FIRST</h3>
+                    <p>
+                        FIRST — это глобальная некоммерческая организация, которая вдохновляет молодых людей становиться 
+                        лидерами в науке и технологиях, вовлекая их в увлекательные программы с наставниками, которые 
+                        развивают навыки в науке, инженерии и технологиях.
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">⚙️</div>
+                    <h3>Что такое FTC</h3>
+                    <p>
+                        FIRST Tech Challenge (FTC) — это соревнование по робототехнике для учеников 7-12 классов. Команды 
+                        проектируют, строят и программируют роботов для соревнований в формате альянсов против других команд.
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🌟</div>
+                    <h3>Почему это важно</h3>
+                    <p>
+                        FTC обучает студентов ценным STEM навыкам, командной работе и решению проблем, весело проводя время. 
+                        Участники получают реальный инженерный опыт и развивают уверенность в своих способностях.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Preview -->
+    <section class="section">
+        <div class="container">
+            <div class="team-preview">
+                <div style="display: flex; flex-direction: column; gap: var(--spacing-md);">
+                    <img src="изображения/IMG_5420.JPG" alt="Команда Team STRIKE работает над роботом" class="team-preview-image" onerror="this.src='https://via.placeholder.com/400x300/FFD700/000000?text=Team+Photo'">
+                </div>
+                <div>
+                    <h2>Наша Команда</h2>
+                    <p style="margin-bottom: var(--spacing-sm);">
+                        Мы — команда STRIKE #33624 из Шымкента, объединяющая учеников, увлечённых робототехникой, программированием, инженерией и современными технологиями.
+                    </p>
+                    <p style="margin-bottom: var(--spacing-md);">
+                       Наша команда проектирует, собирает и программирует роботов для соревнований FIRST Tech Challenge. Мы развиваем инженерные навыки, участвуем в STEM-проектах и вдохновляем школьников заниматься технологиями.
+                    </p>
+                    <a href="team.html" class="btn btn-secondary">Узнать больше о нашей команде</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning for New Teams -->
+    <section class="section" style="background-color: var(--color-light-gray);">
+        <div class="container">
+            <h2 class="section-title">Обучение для новых команд</h2>
+            <p class="section-subtitle">
+                Начните работу с FTC через наши комплексные учебные модули, разработанные для команд всех уровней.
+            </p>
+            <div class="learning-modules">
+                <div class="module-card">
+                    <div class="card-icon">📚</div>
+                    <h3>Основы</h3>
+                    <p>
+                        Изучите основы: начало работы, процесс регистрации и понимание структуры сезона. 
+                        Идеально для новых команд.
+                    </p>
+                </div>
+                <div class="module-card">
+                    <div class="card-icon">🔧</div>
+                    <h3>Сборка робота</h3>
+                    <p>
+                        Освойте конструирование роботов: приводы, механизмы, электроника и датчики. Стройте 
+                        конкурентоспособных роботов с уверенностью.
+                    </p>
+                </div>
+                <div class="module-card">
+                    <div class="card-icon">💻</div>
+                    <h3>Программирование</h3>
+                    <p>
+                        Развивайте навыки программирования: FTC SDK, TeleOp, Autonomous, Odometry и обнаружение AprilTag. 
+                        Программируйте как профессионал.
+                    </p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: var(--spacing-md);">
+                <a href="learning.html" class="btn btn-primary">Изучить все учебные модули</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contacts">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Навигация</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="about-first.html">О FIRST</a></li>
+                        <li><a href="about-ftc.html">О FTC</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Ресурсы</h4>
+                    <ul class="footer-links">
+                        <li><a href="learning.html">Обучение</a></li>
+                        <li><a href="team.html">Команда</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>FIRST</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://www.firstinspires.org" target="_blank">FIRST Global</a></li>
+                        <li><a href="about-first.html">FIRST Kazakhstan</a></li>
+                        <li><a href="about-ftc.html">Программа FTC</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <ul class="footer-links">
+                        <li>Email: ftcstrike@gmail.com</li>
+                        <li>Phone: +7 705 255 19 89</li>
+                        <li>Location: Kazakhstan</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+

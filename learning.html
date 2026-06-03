@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обучение и туториалы - Team STRIKE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="nav-script.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Team STRIKE</a>
+            <div style="display: flex; align-items: center;">
+                <ul class="nav-links">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="about-first.html">FIRST</a></li>
+                    <li><a href="about-ftc.html">FTC</a></li>
+                    <li><a href="learning.html">Обучение</a></li>
+                    <li><a href="team.html">Команда</a></li>
+                </ul>
+                <a href="en/learning.html" class="lang-switcher" style="margin-right: 12px; color: var(--color-gold); text-decoration: none; font-weight: 600; border: 1px solid var(--color-gold); padding: 4px 10px; border-radius: 6px;" title="English version">EN</a>
+                <div class="theme-switcher" onclick="toggleTheme()" title="Переключить тему">
+                    <span id="theme-icon">☀️</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="hero" style="min-height: 400px;">
+        <div class="container">
+            <div style="text-align: center;">
+                <h1>Обучение и туториалы</h1>
+                <p style="font-size: 1.25rem; max-width: 800px; margin: var(--spacing-md) auto; color: var(--color-text-secondary);">
+                    Комплексные учебные модули, разработанные для помощи командам всех уровней добиться успеха в FIRST Tech Challenge. 
+                    От основ до продвинутых техник, найдите всё необходимое для создания конкурентоспособных роботов.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Start Here Section -->
+    <section class="section">
+        <div class="container">
+            <div style="margin-bottom: var(--spacing-lg);">
+                <h2 style="margin-bottom: var(--spacing-md); display: flex; align-items: center; gap: var(--spacing-sm);">
+                    <span style="font-size: 2rem;">🚀</span> Start Here
+                </h2>
+                <p style="margin-bottom: var(--spacing-md); color: var(--color-text-secondary); font-size: 1.1rem;">
+                    Новичок в FTC? Начните с этого раздела. Мы поможем вам собрать первого робота из минимального набора.
+                </p>
+                <div class="learning-modules">
+                    <div class="module-card" onclick="window.location.href='learning-module.html?id=start-kit'">
+                        <div class="card-icon">📦</div>
+                        <h3>Минимальный набор для старта</h3>
+                        <p>
+                            Что нужно купить для начала: базовый набор FTC, инструменты, расходные материалы. 
+                            Список с ценами и где купить в Казахстане.
+                        </p>
+                    </div>
+                    <div class="module-card" onclick="window.location.href='learning-module.html?id=first-robot'">
+                        <div class="card-icon">🔨</div>
+                        <h3>Сборка первого робота</h3>
+                        <p>
+                            Пошаговая инструкция: от распаковки коробки до первого движения робота. Видео-туториалы 
+                            и чек-листы для каждого этапа.
+                        </p>
+                    </div>
+                    <div class="module-card" onclick="window.location.href='learning-module.html?id=testing'">
+                        <div class="card-icon">✅</div>
+                        <h3>Проверка работоспособности</h3>
+                        <p>
+                            Как проверить, что всё работает: тестирование моторов, сервоприводов, датчиков. 
+                            Решение типичных проблем новичков.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+    <!-- Learning Modules -->
+    <section class="section">
+        <div class="container">
+            <!-- Basics Module -->
+            <div style="margin-bottom: var(--spacing-lg);">
+                <h2 style="margin-bottom: var(--spacing-md); display: flex; align-items: center; gap: var(--spacing-sm);">
+                    <span style="font-size: 2rem;">📚</span> Основы
+                </h2>
+                <p style="margin-bottom: var(--spacing-md); color: var(--color-text-secondary);">
+                    Необходимые знания для новых команд, начинающих работу с FTC.
+                </p>
+                <div class="learning-modules">
+                    <div class="module-card" onclick="window.location.href='learning-module.html?id=getting-started'">
+                        <div class="card-icon">🚀</div>
+                        <h3>Начало работы</h3>
+                        <p>
+                            Узнайте, как сформировать команду, найти наставников и организовать рабочее пространство. Необходимые первые 
+                            шаги для новых команд FTC.
+                        </p>
+                    </div>
+                    <div class="module-card" onclick="window.location.href='learning-module.html?id=registration'">
+                        <div class="card-icon">📝</div>
+                        <h3>Регистрация</h3>
+                        <p>
+                            Пошаговое руководство по регистрации вашей команды в FIRST, пониманию взносов и 
+                            доступу к ресурсам команды.
+                        </p>
+                    </div>
+                    <div class="module-card" onclick="window.location.href='learning-module.html?id=season-structure'">
+                        <div class="card-icon">📅</div>
+                        <h3>Структура сезона</h3>
+                        <p>
+                            Поймите временную линию сезона FTC: kickoff, сезон сборки, соревнования и важные 
+                            дедлайны в течение года.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Robot Module -->
+            <div style="margin-bottom: var(--spacing-lg);">
+                <h2 style="margin-bottom: var(--spacing-md); display: flex; align-items: center; gap: var(--spacing-sm);">
+                    <span style="font-size: 2rem;">🔧</span> Робот
+                </h2>
+                <p style="margin-bottom: var(--spacing-md); color: var(--color-text-secondary);">
+                    Стройте конкурентоспособных роботов с помощью этих комплексных руководств по механическому дизайну и конструированию.
+                </p>
+                <div class="learning-modules">
+                    <div class="module-card" onclick="window.location.href='learning-module.html?id=drivetrains'">
+                        <div class="card-icon">🚗</div>
+                        <h3>Drivetrains</h3>
+                        <p>
+                            Узнайте о различных типах приводов: tank drive, mecanum, swerve и omni wheels. 
+                            Принципы дизайна и критерии выбора.
+                        </p>
+                    </div>
+                    <div class="module-card" onclick="window.location.href='learning-module.html?id=mechanisms'">
+                        <div class="card-icon">⚙️</div>
+                        <h3>Механизмы</h3>
+                        <p>
+                            Проектируйте эффективные механизмы: интейки, подъёмники, манипуляторы и энд-эффекторы. Механическое 
+                            преимущество, передаточные отношения и анализ сил.
+                        </p>
+                    </div>
+                    <div class="module-card" onclick="window.location.href='learning-module.html?id=electronics'">
+                        <div class="card-icon">🔌</div>
+                        <h3>Электроника</h3>
+                        <p>
+                            Обзор электроники FTC: control hub, expansion hub, моторы, сервоприводы и проводка. 
+                            Управление питанием и безопасность.
+                        </p>
+                    </div>
+                    <div class="module-card" onclick="window.location.href='learning-module.html?id=sensors'">
+                        <div class="card-icon">📡</div>
+                        <h3>Датчики</h3>
+                        <p>
+                            Эффективное использование датчиков: энкодеры, IMU, цветовые датчики, дистанционные датчики и 
+                            тактильные датчики. Интеграция и калибровка.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Programming Module -->
+            <div style="margin-bottom: var(--spacing-lg);">
+                <h2 style="margin-bottom: var(--spacing-md); display: flex; align-items: center; gap: var(--spacing-sm);">
+                    <span style="font-size: 2rem;">💻</span> Программирование
+                </h2>
+                <p style="margin-bottom: var(--spacing-md); color: var(--color-text-secondary);">
+                    Освойте программирование FTC от основ до продвинутых техник.
+                </p>
+                <div class="learning-modules">
+                    <div class="module-card" onclick="window.location.href='learning-module.html?id=ftc-sdk'">
+                        <div class="card-icon">📦</div>
+                        <h3>FTC SDK</h3>
+                        <p>
+                            Введение в Software Development Kit для FTC. Настройка Android Studio, 
+                            структура проекта и основные концепции.
+                        </p>
+                    </div>
+                    <div class="module-card" onclick="window.location.href='learning-module.html?id=autonomous'">
+                        <div class="card-icon">🤖</div>
+                        <h3>Autonomous</h3>
+                        <p>
+                            Написание автономных программ. Движения по времени, навигация на основе датчиков и создание 
+                            надёжных автономных программ.
+                        </p>
+                    </div>
+                    <div class="module-card" onclick="window.location.href='learning-module.html?id=odometry'">
+                        <div class="card-icon">📍</div>
+                        <h3>Odometry</h3>
+                        <p>
+                            Продвинутая локализация с использованием одометрии. Энкодеры на мёртвых колёсах, оценка позы и 
+                            точное позиционирование робота.
+                        </p>
+                    </div>
+                    <div class="module-card" onclick="window.location.href='learning-module.html?id=apriltag'">
+                        <div class="card-icon">🏷️</div>
+                        <h3>AprilTag</h3>
+                        <p>
+                            Обработка изображений с обнаружением AprilTag. Настройка камеры, распознавание тегов и 
+                            использование зрения для автономной навигации.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Strategy Module -->
+            <div style="margin-bottom: var(--spacing-lg);">
+                <h2 style="margin-bottom: var(--spacing-md); display: flex; align-items: center; gap: var(--spacing-sm);">
+                    <span style="font-size: 2rem;">🎯</span> Стратегия
+                </h2>
+                <p style="margin-bottom: var(--spacing-md); color: var(--color-text-secondary);">
+                    Конкурентная стратегия и планирование матчей для максимизации производительности вашей команды.
+                </p>
+                <div class="learning-modules">
+                    <div class="module-card" onclick="window.location.href='learning-module.html?id=scouting'">
+                        <div class="card-icon">🔍</div>
+                        <h3>Scouting</h3>
+                        <p>
+                            Эффективные техники скаутинга: сбор данных, анализ и использование данных скаутинга 
+                            для выбора альянсов и стратегии матча.
+                        </p>
+                    </div>
+                    <div class="module-card" onclick="window.location.href='learning-module.html?id=match-planning'">
+                        <div class="card-icon">📊</div>
+                        <h3>Планирование матча</h3>
+                        <p>
+                            Разработка стратегий матча, коммуникация в альянсе и адаптация к различным 
+                            противникам и условиям поля.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Safety & Organization -->
+            <div style="margin-bottom: var(--spacing-lg);">
+                <h2 style="margin-bottom: var(--spacing-md); display: flex; align-items: center; gap: var(--spacing-sm);">
+                    <span style="font-size: 2rem;">🛡️</span> Безопасность и Организация
+                </h2>
+                <p style="margin-bottom: var(--spacing-md); color: var(--color-text-secondary);">
+                    Важные аспекты работы команды: безопасность, организация работы, ведение портфолио.
+                </p>
+                <div class="learning-modules">
+                    <div class="module-card" onclick="window.location.href='learning-module.html?id=safety'">
+                        <div class="card-icon">⚠️</div>
+                        <h3>Безопасность в FTC</h3>
+                        <p>
+                            Правила безопасности при работе с инструментами, электроникой, на соревнованиях. 
+                            Чек-лист безопасности для команды.
+                        </p>
+                    </div>
+                    <div class="module-card" onclick="window.location.href='learning-module.html?id=team-organization'">
+                        <div class="card-icon">👥</div>
+                        <h3>Организация команды</h3>
+                        <p>
+                            Как распределить роли, организовать встречи, управлять временем. Шаблоны для планирования 
+                            сезона и встреч команды.
+                        </p>
+                    </div>
+                    <div class="module-card" onclick="window.location.href='learning-module.html?id=portfolio'">
+                        <div class="card-icon">📔</div>
+                        <h3>Ведение портфолио</h3>
+                        <p>
+                            Как вести Engineering Notebook: что записывать, как структурировать, примеры хороших 
+                            записей. Важно для наград Inspire и Think.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Common Mistakes -->
+            <div style="margin-bottom: var(--spacing-lg);">
+                <h2 style="margin-bottom: var(--spacing-md); display: flex; align-items: center; gap: var(--spacing-sm);">
+                    <span style="font-size: 2rem;">⚠️</span> Common Mistakes
+                </h2>
+                <p style="margin-bottom: var(--spacing-md); color: var(--color-text-secondary);">
+                    Learn from common pitfalls and avoid mistakes that can cost your team valuable points.
+                </p>
+                <div class="card" style="max-width: 900px; margin: 0 auto;">
+                    <h3>Top Mistakes to Avoid</h3>
+                    <ul style="margin-left: var(--spacing-md); color: var(--color-text-secondary); line-height: 2;">
+                        <li><strong>Overcomplicating designs:</strong> Simple, reliable solutions often outperform complex ones</li>
+                        <li><strong>Ignoring game rules:</strong> Always read the game manual thoroughly and check for updates</li>
+                        <li><strong>Poor time management:</strong> Plan your build season and stick to deadlines</li>
+                        <li><strong>Inadequate testing:</strong> Test early and often, especially autonomous routines</li>
+                        <li><strong>Neglecting documentation:</strong> Keep engineering notebooks and document your process</li>
+                        <li><strong>Not practicing driving:</strong> Driver skill is crucial - practice regularly</li>
+                        <li><strong>Forgetting safety:</strong> Follow all safety rules and use proper protective equipment</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about-first.html">About FIRST</a></li>
+                        <li><a href="about-ftc.html">About FTC</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="learning.html">Guides & Tutorials</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="download-app.html">Download App</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>FIRST</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://www.firstinspires.org" target="_blank">FIRST Global</a></li>
+                        <li><a href="about-first.html">FIRST Kazakhstan</a></li>
+                        <li><a href="about-ftc.html">FTC Program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li>Email: ftcstrike@gmail.com</li>
+                        <li>Phone: +7 705 255 19 89</li>
+                        <li>Location: Kazakhstan</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
